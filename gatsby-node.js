@@ -2,6 +2,38 @@ const path = require('path');
 
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter!
+    }
+
+    type Frontmatter {
+      title: String!
+      date(
+        difference: String
+        formatString: String
+        fromNow: Boolean
+        locale: String
+      ): Date!
+      category: String!
+      delivery: String!
+      description: String!
+      address: String
+      background: String
+      email: String
+      site: String 
+      telefone: String
+      whatsapp: String
+      instagram: String
+      facebook: String
+      image: String
+    }
+  `;
+  createTypes(typeDefs);
+};
+
 // To add the slug field to each post
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;

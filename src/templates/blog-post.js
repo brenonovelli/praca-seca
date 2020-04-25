@@ -189,7 +189,7 @@ const BlogPost = ({ data, pageContext: { nextPost, previousPost } }) => {
 
       <S.PostFooter>
         <S.PostDate>Cadastrado em: {post.frontmatter.date}</S.PostDate>
-        <a href="#" title="">
+        <a href="/report" title="">
           Reportar problema
         </a>
       </S.PostFooter>

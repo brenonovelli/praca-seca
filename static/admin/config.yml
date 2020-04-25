@@ -23,49 +23,32 @@ collections:
           name: 'address',
           widget: 'string',
           required: false,
-          default: null,
         }
-      - {
-          label: 'E-mail',
-          name: 'email',
-          widget: 'string',
-          required: false,
-          default: null,
-        }
-      - {
-          label: 'Site',
-          name: 'site',
-          widget: 'string',
-          required: false,
-          default: null,
-        }
+      - { label: 'E-mail', name: 'email', widget: 'string', required: false }
+      - { label: 'Site', name: 'site', widget: 'string', required: false }
       - {
           label: 'Telefone',
           name: 'telefone',
           widget: 'string',
           required: false,
-          default: null,
         }
       - {
           label: 'Whatsapp',
           name: 'whatsapp',
           widget: 'string',
           required: false,
-          default: null,
         }
       - {
           label: 'Instagram',
           name: 'instagram',
           widget: 'string',
           required: false,
-          default: null,
         }
       - {
           label: 'Facebook',
           name: 'facebook',
           widget: 'string',
           required: false,
-          default: null,
         }
       - {
           label: 'Entregas ou atendimento presencial',
@@ -78,13 +61,7 @@ collections:
               { label: 'Não', value: 3 },
             ],
         }
-      - {
-          label: 'image',
-          name: 'thumbnail',
-          widget: 'image',
-          required: false,
-          default: null,
-        }
+      - { label: 'image', name: 'thumbnail', widget: 'image', required: false }
       - {
           label: 'Date',
           name: 'date',
@@ -96,7 +73,6 @@ collections:
           name: 'background',
           widget: 'select',
           required: false,
-          default: null,
           options:
             [
               { label: 'Jekyll', value: '#B31917' },
@@ -108,10 +84,4 @@ collections:
               { label: 'Misc', value: '#7AAB13' },
             ],
         }
-      - {
-          label: 'Body',
-          name: 'body',
-          widget: 'markdown',
-          required: false,
-          default: null,
-        }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
