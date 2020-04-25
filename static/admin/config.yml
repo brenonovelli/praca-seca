@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: brenonovelli/gatsby-blog
+  repo: brenonovelli/praca-seca
   branch: master
-  site_domain: gatsby-blog-breno.netlify.app/
+  site_domain: localhost:8000/
 
 publish_mode: editorial_workflow
 media_folder: 'static/assets/img'
