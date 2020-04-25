@@ -5,7 +5,7 @@ category: null
 delivery: null
 description: null
 address: null
-background: null
+background: '#333333'
 email: null
 site: null
 telefone: null
