@@ -10,7 +10,7 @@ description: >-
 
   Fica Chacrinha, no fim da Rua Tejo, no cruzamento da Inhamuns com a Urucuia.
 category: Açougue
-tags: açougue, hortifruti
+tags: ""
 address: Rua Tejo sem número, lote 30, loja 2 quadra A
 email: boibom.vilavalqueire@gmail.com
 site: ""
@@ -19,5 +19,5 @@ whatsapp: "2121867361"
 instagram: boibom.valqueire
 facebook: boibomvalqueire
 delivery: 1
-date: 2020-04-25 07:07:52
+date: 2020-04-25T07:07:52.000Z
 ---
