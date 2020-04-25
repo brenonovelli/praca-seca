@@ -11,5 +11,6 @@ whatsapp: "21981609221"
 instagram: deliciasdamalia
 facebook: deliciasdamalia
 delivery: 1
-date: 2020-04-25 08:41:37
+thumbnail: assets/img/damalia.jpg
+date: 2020-04-25T08:41:37.000Z
 ---
