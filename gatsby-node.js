@@ -18,6 +18,7 @@ exports.createSchemaCustomization = ({ actions }) => {
         locale: String
       ): Date!
       category: String!
+      tags: [String]
       delivery: String!
       description: String!
       address: String
