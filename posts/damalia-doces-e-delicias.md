@@ -1,0 +1,15 @@
+---
+title: DaMalia doces e delícias
+description: Cones trufados, chocolates, Brownies (todos artesanais).
+category: Alimentação
+tags:
+  - doces
+  - culinaria
+email: famanha@gmail.com
+telefone: "21981609221"
+whatsapp: "21981609221"
+instagram: deliciasdamalia
+facebook: deliciasdamalia
+delivery: 1
+date: 2020-04-25 08:41:37
+---
