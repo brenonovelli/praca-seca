@@ -58,117 +58,134 @@ const BlogPost = ({ data, pageContext: { nextPost, previousPost } }) => {
 
       <S.PostContacts>
         {/* Address */}
-        <S.PostContact className="item">
-          <S.IconWrapper>
-            <PinOutline />
-          </S.IconWrapper>
-          <S.TextWrapper>
-            <strong>Endereço:</strong>
-            <span>{post.frontmatter.address}</span>
-          </S.TextWrapper>
-        </S.PostContact>
+        {post.frontmatter.address && (
+          <S.PostContact className="item">
+            <S.IconWrapper>
+              <PinOutline />
+            </S.IconWrapper>
+            <S.TextWrapper>
+              <strong>Endereço:</strong>
+              <span>{post.frontmatter.address}</span>
+            </S.TextWrapper>
+          </S.PostContact>
+        )}
 
         {/* Phone */}
-        <S.PostContactLink
-          className="item"
-          href={`tel:${post.frontmatter.phone}`}
-          title="Phone"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <S.IconWrapper>
-            <PhoneOutline />
-          </S.IconWrapper>
-          <S.TextWrapper>
-            <strong>Phone:</strong>
-            <span>{post.frontmatter.telefone}</span>
-          </S.TextWrapper>
-        </S.PostContactLink>
+        {post.frontmatter.phone && (
+          <S.PostContactLink
+            className="item"
+            href={`tel:${post.frontmatter.phone}`}
+            title="Phone"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <S.IconWrapper>
+              <PhoneOutline />
+            </S.IconWrapper>
+            <S.TextWrapper>
+              <strong>Phone:</strong>
+              <span>{post.frontmatter.telefone}</span>
+            </S.TextWrapper>
+          </S.PostContactLink>
+        )}
 
         {/* Email */}
-        <S.PostContact className="item">
-          <S.IconWrapper>
-            <EmailOutline />
-          </S.IconWrapper>
-          <S.TextWrapper>
-            <strong>E-mail:</strong>
-            <span>{post.frontmatter.email}</span>
-          </S.TextWrapper>
-        </S.PostContact>
+        {post.frontmatter.email && (
+          <S.PostContact className="item">
+            <S.IconWrapper>
+              <EmailOutline />
+            </S.IconWrapper>
+            <S.TextWrapper>
+              <strong>E-mail:</strong>
+              <span>{post.frontmatter.email}</span>
+            </S.TextWrapper>
+          </S.PostContact>
+        )}
 
         {/* Site */}
-        <S.PostContactLink
-          className="item"
-          href={`https://${post.frontmatter.site}`}
-          title="Site"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <S.IconWrapper>
-            <BrowserOutline />
-          </S.IconWrapper>
-          <S.TextWrapper>
-            <strong>Site:</strong>
-            <span>{post.frontmatter.site}</span>
-          </S.TextWrapper>
-        </S.PostContactLink>
+        {post.frontmatter.site && (
+          <S.PostContactLink
+            className="item"
+            href={`https://${post.frontmatter.site}`}
+            title="Site"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <S.IconWrapper>
+              <BrowserOutline />
+            </S.IconWrapper>
+            <S.TextWrapper>
+              <strong>Site:</strong>
+              <span>{post.frontmatter.site}</span>
+            </S.TextWrapper>
+          </S.PostContactLink>
+        )}
 
         {/* Whatsapp */}
-        <S.PostContactLink
-          className="item"
-          href={`https://api.whatsapp.com/send?phone=55${post.frontmatter.whatsapp}`}
-          title="Whatsapp"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <S.IconWrapper>
-            <Whatsapp />
-          </S.IconWrapper>
-          <S.TextWrapper>
-            <strong>Whatsapp:</strong>
-            <span>{post.frontmatter.whatsapp}</span>
-          </S.TextWrapper>
-        </S.PostContactLink>
+        {post.frontmatter.whatsapp && (
+          <S.PostContactLink
+            className="item"
+            href={`https://api.whatsapp.com/send?phone=55${post.frontmatter.whatsapp}`}
+            title="Whatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <S.IconWrapper>
+              <Whatsapp />
+            </S.IconWrapper>
+
+            <S.TextWrapper>
+              <strong>Whatsapp:</strong>
+              <span>{post.frontmatter.whatsapp}</span>
+            </S.TextWrapper>
+          </S.PostContactLink>
+        )}
 
         {/* Instagram */}
-        <S.PostContactLink
-          className="item"
-          href={`https://www.instagram.com/${post.frontmatter.instagram}`}
-          title="Instagram"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <S.IconWrapper>
-            <Instagram />
-          </S.IconWrapper>
-          <S.TextWrapper>
-            <strong>Instagram:</strong>
-            <span>@{post.frontmatter.instagram}</span>
-          </S.TextWrapper>
-        </S.PostContactLink>
+        {post.frontmatter.instagram && (
+          <S.PostContactLink
+            className="item"
+            href={`https://www.instagram.com/${post.frontmatter.instagram}`}
+            title="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <S.IconWrapper>
+              <Instagram />
+            </S.IconWrapper>
+            <S.TextWrapper>
+              <strong>Instagram:</strong>
+              <span>@{post.frontmatter.instagram}</span>
+            </S.TextWrapper>
+          </S.PostContactLink>
+        )}
 
         {/* Facebook */}
-        <S.PostContactLink
-          className="item"
-          href={`https://www.fb.com/${post.frontmatter.facebook}`}
-          title="Facebook"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <S.IconWrapper>
-            <Facebook />
-          </S.IconWrapper>
-          <S.TextWrapper>
-            <strong>Facebook:</strong>
-            <span>/{post.frontmatter.facebook}</span>
-          </S.TextWrapper>
-        </S.PostContactLink>
+        {post.frontmatter.facebook && (
+          <S.PostContactLink
+            className="item"
+            href={`https://www.fb.com/${post.frontmatter.facebook}`}
+            title="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <S.IconWrapper>
+              <Facebook />
+            </S.IconWrapper>
+            <S.TextWrapper>
+              <strong>Facebook:</strong>
+              <span>/{post.frontmatter.facebook}</span>
+            </S.TextWrapper>
+          </S.PostContactLink>
+        )}
       </S.PostContacts>
 
-      <S.MainContent>
-        {/* eslint-disable-next-line react/no-danger */}
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </S.MainContent>
+      {post.html && (
+        <S.MainContent>
+          {/* eslint-disable-next-line react/no-danger */}
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </S.MainContent>
+      )}
 
       <S.PostFooter>
         <S.PostDate>Cadastrado em: {post.frontmatter.date}</S.PostDate>

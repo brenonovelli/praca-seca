@@ -190,7 +190,6 @@ export const TextWrapper = styled.div`
 // Fim contacts
 
 export const PostFooter = styled.footer`
-  border-top: var(--borders) 1px solid;
   color: var(--postColor);
   margin: auto;
   max-width: 70rem;
@@ -218,6 +217,8 @@ export const MainContent = styled.section`
   margin: auto;
   max-width: 70rem;
   padding: 2rem 5rem;
+  border-bottom: var(--borders) 1px solid;
+
   ${media.lessThan('large')`
     padding: 2rem 0;
     max-width: 100%;

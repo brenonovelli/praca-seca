@@ -32,7 +32,7 @@ const BlogList = ({ data, pageContext: { currentPage, numPages } }) => {
             <PostItem
               key={slug}
               slug={slug}
-              background={background}
+              background={background || null}
               category={category}
               date={date}
               timeToRead={timeToRead}
