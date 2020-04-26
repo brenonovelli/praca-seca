@@ -1,7 +1,8 @@
 ---
 title: Celebrar Produções
 description: Serviço de Audiovisual em geral (Fotografia , Filmagem e edições).
-category: Fotografia e Filmagem
+category: Serviços Profissionais
+subcategory: Fotografia e Filmagem
 email: photo_producao@yahoo.com.br
 site: https://photoproducao.wixsite.com/flaviomanhaes
 telefone: "21967150502"
@@ -9,7 +10,7 @@ whatsapp: "21967150502"
 instagram: celebrar_producoes
 facebook: CelebrarProducoes
 delivery: 2
-date: 2020-04-25 08:39:36
+date: 2020-04-25T08:39:36.000Z
 ---
 \* Fotografia e filmagem de casamentos, festas infantis, 15 anos, Corporativo e etc...\
 * Imagens aéreas (Drone)\
