@@ -2,7 +2,10 @@
 title: Bolos da Dessa
 description: "Vendemos doces decorados para sua festa ou para presentear alguém
   especial! Orçamento via WhatsApp ou Instagram, fazemos entrega! "
-category: Confeitaria
+category: Alimentação
+subcategory: Confeitaria
+tags:
+  - ""
 address: Rua Cândido Benício, 2080 - casa 21
 email: marianacozzolino58@gmail.com
 site: ""
@@ -11,5 +14,5 @@ whatsapp: "21995919552"
 instagram: bolosdadessa
 facebook: bolosdadessa
 delivery: 1
-date: 2020-04-25 09:14:13
+date: 2020-04-25T09:14:13.000Z
 ---
