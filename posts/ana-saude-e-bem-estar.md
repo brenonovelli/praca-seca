@@ -3,6 +3,10 @@ title: Ana - Saúde e bem estar
 description: Sou técnica em Podologia depiladora e massoterapeuta e faço
   atendimento em domicílio.
 category: Estética e Beleza
+tags:
+  - podologia
+  - depilação
+  - massagem
 email: annahveira@gmail.com
 telefone: "21981122581"
 whatsapp: "21981122581"
