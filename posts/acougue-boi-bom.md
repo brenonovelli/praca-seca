@@ -9,7 +9,8 @@ description: >-
 
 
   Fica Chacrinha, no fim da Rua Tejo, no cruzamento da Inhamuns com a Urucuia.
-category: Açougue
+category: Lojas e Comércios
+subcategory: Açougue e Casa de Carnes
 tags:
   - açougue
   - hortifruti
@@ -21,5 +22,5 @@ whatsapp: "2121867361"
 instagram: boibom.valqueire
 facebook: boibomvalqueire
 delivery: 1
-date: 2020-04-25 08:30:47
+date: 2020-04-25T08:30:47.000Z
 ---
