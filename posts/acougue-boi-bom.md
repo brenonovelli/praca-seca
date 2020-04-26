@@ -1,14 +1,7 @@
 ---
 title: Açougue Boi Bom
-description: >-
-  Temos todos os produtos repostos e fresquinhos todos os dias de manhã. Temos
-  hortifruti, mercearia e açougue. Nosso diferencial é a entrega, isso mesmo,
-  entregamos em casa tanto carnes como frutas, legumes ou verduras. É só nos
-  chamar no Whatsapp que enviamos nossa tabela de preços pra facilitar seu
-  pedido.
-
-
-  Fica Chacrinha, no fim da Rua Tejo, no cruzamento da Inhamuns com a Urucuia.
+description: Hortifruti, mercearia e açougue. Entregamos em casa tanto carnes
+  como frutas, legumes ou verduras.
 category: Lojas e Comércios
 subcategory: Açougue e Casa de Carnes
 tags:
@@ -24,3 +17,6 @@ facebook: boibomvalqueire
 delivery: 1
 date: 2020-04-25T08:30:47.000Z
 ---
+Temos todos os produtos repostos e fresquinhos todos os dias de manhã. Temos hortifruti, mercearia e açougue. Nosso diferencial é a entrega, isso mesmo, entregamos em casa tanto carnes como frutas, legumes ou verduras. É só nos chamar no Whatsapp que enviamos nossa tabela de preços pra facilitar seu pedido.
+
+Fica Chacrinha, no fim da Rua Tejo, no cruzamento da Inhamuns com a Urucuia.
