@@ -28,6 +28,7 @@ collections:
           options:
             [
               { label: 'Alimentação', value: 'Alimentação' },
+              { label: 'Confeitaria', value: 'Confeitaria' },
               {
                 label: 'Construção e reformas',
                 value: 'Construção e reformas',

@@ -39,7 +39,9 @@ module.exports = {
         path: `${__dirname}/posts`,
       },
     },
-
+    {
+      resolve: `gatsby-plugin-polished`,
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { lighten } from 'polished';
 
 export const MenuLinksWrapper = styled.nav`
   ${media.lessThan('large')`
@@ -31,6 +32,27 @@ export const MenuLinksLink = styled(AniLink)`
   transition: color 0.5s;
   &:hover {
     color: var(--highlight);
+  }
+`;
+
+export const CategoryLink = styled(AniLink)`
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+
+  color: var(--white);
+  background: ${props =>
+    props.background ? props.background : 'var(--highlight)'};
+
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition: all 0.2s;
+
+  &:hover {
+    background: ${props =>
+      props.background ? lighten(0.05, props.background) : 'var(--highlight)'};
+    padding: 0.2rem 1.5rem 0.2rem 0.75rem;
   }
 `;
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { Bars } from 'styled-icons/fa-solid';
 import { SearchAlt2 as Search } from 'styled-icons/boxicons-regular/';
 
+import categories from '../../utils/categories';
 import getThemeColor from '../../utils/getThemeColor';
 import links from './content';
 
@@ -39,6 +40,21 @@ const MenuLinks = () => (
           >
             {link.label}
           </S.MenuLinksLink>
+        </S.MenuLinksItem>
+      ))}
+
+      {categories.map(category => (
+        <S.MenuLinksItem key={category.slug}>
+          <S.CategoryLink
+            cover
+            direction="left"
+            background={category.color}
+            duration={0.6}
+            to={`segmento/${category.slug}`}
+            activeClassName="active"
+          >
+            {category.title}
+          </S.CategoryLink>
         </S.MenuLinksItem>
       ))}
     </S.MenuLinksList>

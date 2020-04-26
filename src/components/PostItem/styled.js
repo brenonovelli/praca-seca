@@ -36,35 +36,33 @@ export const PostItemWrapper = styled.section`
   `}
 `;
 
-export const PostItemTag = styled.div`
+export const PostCategories = styled.div`
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 0.7rem;
+
+  font-size: 0.875rem;
+
+  > div {
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+`;
+
+export const PostCategory = styled.div`
   background: ${props =>
     props.background ? props.background : 'var(--highlight)'};
   color: var(--white);
 
-  display: flex;
-  justify-content: center;
-  padding: 0.2rem 0.5rem;
-  margin-bottom: 0.7rem;
-
-  border-radius: 0.25rem;
-
-  font-size: 0.875rem;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-weight: 500;
 `;
 
-export const PostItemInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  ${media.lessThan('large')`
-    margin: 0;
-  `}
+export const PostSubCategory = styled.div`
+  color: ${props => (props.color ? props.color : 'var(--texts)')};
 `;
 
-export const PostCategory = styled.div`
-  font-size: 0.9rem;
-`;
+export const PostItemInfo = styled.div``;
 
 export const PostItemTitle = styled.h1`
   font-size: 1.6rem;
