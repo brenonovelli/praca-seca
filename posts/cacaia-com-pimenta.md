@@ -4,6 +4,7 @@ description: "Comida caseira, sem aditivos químicos, trabalhamos com delivery,
   aceitamos todos os cartões, sem taxa de entrega. Cardápio variado todos os
   dias. "
 category: Alimentação
+subcategory: Comida Caseira
 tags:
   - comida caseira
   - ""
@@ -12,5 +13,5 @@ telefone: "21979141158"
 whatsapp: "21979141158"
 facebook: cacaiacompimenta
 delivery: 1
-date: 2020-04-25 08:36:28
+date: 2020-04-25T08:36:28.000Z
 ---
