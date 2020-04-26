@@ -1,8 +1,8 @@
 ---
 title: DaMalia doces e delícias
 description: Cones trufados, chocolates, Brownies (todos artesanais).
-category: Alimentação
-subcategory: Confeitaria
+category: Confeitaria
+subcategory: ""
 tags:
   - doces
   - culinaria
