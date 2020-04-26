@@ -2,8 +2,8 @@
 title: Bolos da Dessa
 description: "Vendemos doces decorados para sua festa ou para presentear alguém
   especial! Orçamento via WhatsApp ou Instagram, fazemos entrega! "
-category: Alimentação
-subcategory: Confeitaria
+category: Confeitaria
+subcategory: Doces
 tags:
   - ""
 address: Rua Cândido Benício, 2080 - casa 21
