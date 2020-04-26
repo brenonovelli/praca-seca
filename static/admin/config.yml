@@ -21,7 +21,34 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Ramo/categoria', name: 'category', widget: 'string' }
+      - {
+          label: 'Categoria',
+          name: 'category',
+          widget: 'select',
+          options:
+            [
+              { label: 'Alimentação', value: 'Alimentação' },
+              {
+                label: 'Construção e reformas',
+                value: 'Construção e reformas',
+              },
+              { label: 'Educação', value: 'Educação' },
+              { label: 'Estética e Beleza', value: 'Estética e Beleza' },
+              { label: 'Informática', value: 'Informática' },
+              { label: 'Lojas e Comércios', value: 'Lojas e Comércios' },
+              {
+                label: 'Serviços Profissionais',
+                value: 'Serviços Profissionais',
+              },
+            ],
+        }
+      # - { label: 'Ramo/categoria', name: 'category', widget: 'string' }
+      - {
+          label: 'Subcategoria',
+          name: 'subcategory',
+          widget: 'string',
+          required: false,
+        }
       - {
           label: 'Tags',
           name: 'tags',

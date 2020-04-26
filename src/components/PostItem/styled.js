@@ -15,16 +15,19 @@ export const PostItemLink = styled(AniLink)`
 `;
 
 export const PostItemWrapper = styled.section`
-  align-items: center;
-
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
   padding: 2rem 3rem;
   width: 100%;
+
   body#grid & {
     border: none;
     padding: 2rem 1rem;
-    flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
   }
   ${media.lessThan('large')`
     align-items: flex-start;
@@ -34,41 +37,32 @@ export const PostItemWrapper = styled.section`
 `;
 
 export const PostItemTag = styled.div`
-  align-items: center;
   background: ${props =>
     props.background ? props.background : 'var(--highlight)'};
-  border-radius: 50%;
-  color: #fff;
+  color: var(--white);
+
   display: flex;
-  font-size: 1.3rem;
-  font-weight: 700;
   justify-content: center;
-  min-height: 90px;
-  min-width: 90px;
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 0.7rem;
+
+  border-radius: 0.25rem;
+
+  font-size: 0.875rem;
+  font-weight: 700;
   text-transform: uppercase;
-  ${media.lessThan('large')`
-    border-radius: 0;
-    font-size: 1rem;
-    min-height: auto;
-    min-width: auto;
-    padding: .2rem .5rem;
-    margin-bottom: .7rem;
-  `}
-  body#grid & {
-    margin-bottom: 1.5rem;
-  }
 `;
 
 export const PostItemInfo = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 1.5rem;
+
   ${media.lessThan('large')`
     margin: 0;
   `}
 `;
 
-export const PostItemDate = styled.time`
+export const PostCategory = styled.div`
   font-size: 0.9rem;
 `;
 
@@ -84,7 +78,19 @@ export const PostItemTitle = styled.h1`
 `;
 
 export const PostItemDescription = styled.p`
-  font-size: 1.2rem;
+  font-size: 0.875rem;
   font-weight: 300;
   line-height: 1.2;
+`;
+
+export const PostItemTags = styled.div`
+  padding: 0.5rem 0;
+
+  span {
+    background: var(--mediumBackground);
+    font-size: 0.75rem;
+    padding: 0.15rem 0.25rem;
+    margin: 0 0.25rem 0.25rem 0;
+    border-radius: 0.25rem;
+  }
 `;

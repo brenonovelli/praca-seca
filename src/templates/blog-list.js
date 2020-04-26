@@ -24,8 +24,7 @@ const BlogList = ({ data, pageContext: { currentPage, numPages } }) => {
         {postList.map(
           ({
             node: {
-              frontmatter: { background, category, date, description, title },
-              timeToRead,
+              frontmatter: { background, category, description, title, tags },
               fields: { slug },
             },
           }) => (
@@ -34,9 +33,8 @@ const BlogList = ({ data, pageContext: { currentPage, numPages } }) => {
               slug={slug}
               background={background || null}
               category={category}
-              date={date}
-              timeToRead={timeToRead}
               title={title}
+              tags={tags}
               description={description}
             />
           )
@@ -70,6 +68,8 @@ export const query = graphql`
             date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
             description
             title
+            image
+            tags
           }
           timeToRead
           fields {
