@@ -2,8 +2,8 @@
 title: Andressa Gourmet
 description: Bolos, doces, biscoitos kits e sobremesas. Entregamos em domicilio,
   aceitamos cartões.
-category: Alimentação
-subcategory: Confeitaria
+category: Confeitaria
+subcategory: ""
 tags:
   - bolo
   - doces
