@@ -5,7 +5,7 @@ description: "Vendemos doces decorados para sua festa ou para presentear alguém
 category: Confeitaria
 subcategory: Doces
 tags:
-  - ""
+  - festas
 address: Rua Cândido Benício, 2080 - casa 21
 email: marianacozzolino58@gmail.com
 site: ""
