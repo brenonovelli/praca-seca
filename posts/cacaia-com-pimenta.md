@@ -6,7 +6,6 @@ description: "Comida caseira, sem aditivos químicos, trabalhamos com delivery,
 category: Alimentação
 subcategory: Comida Caseira
 tags:
-  - comida caseira
   - ""
 email: pauloathayd51@gmail.com
 telefone: "21979141158"
