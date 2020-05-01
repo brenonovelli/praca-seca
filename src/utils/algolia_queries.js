@@ -7,12 +7,22 @@ const postQuery = `{
           slug
         }
         frontmatter {
-          title
-          category
           date_timestamp: date
           date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+          title
+          category
+          subcategory
+          delivery
           description
-          background
+          tags
+          address
+          email
+          site
+          telefone
+          whatsapp
+          instagram
+          facebook
+          image
         }
         excerpt(pruneLength: 5000)
       }
@@ -35,7 +45,7 @@ const queries = [
   {
     query: postQuery,
     transformer: ({ data }) => flatten(data.posts.edges),
-    indexName: `Posts`,
+    indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
     settings,
   },
 ];

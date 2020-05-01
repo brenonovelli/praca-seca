@@ -75,6 +75,8 @@ exports.createPages = ({ graphql, actions }) => {
               title
               description
               category
+              subcategory
+              tags
               address
               background
               email

@@ -4,11 +4,8 @@ description: 'Vendemos doces decorados para sua festa ou para presentear alguém
   especial! Orçamento via WhatsApp ou Instagram, fazemos entrega! '
 category: Confeitaria
 subcategory: Doces
-<<<<<<< HEAD
-=======
 tags:
   - festas
->>>>>>> 5aa9a5a4d2c44a84a286c6f0b26051044b2c32ee
 address: Rua Cândido Benício, 2080 - casa 21
 email: marianacozzolino58@gmail.com
 site: ''

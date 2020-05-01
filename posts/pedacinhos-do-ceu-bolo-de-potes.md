@@ -1,12 +1,8 @@
 ---
 title: Pedacinhos do Céu  Bolo de Potes
 description: Bolos de potes
-<<<<<<< HEAD
 category: Confeitaria
-=======
-category: Alimentação
 subcategory: Bolos
->>>>>>> 5aa9a5a4d2c44a84a286c6f0b26051044b2c32ee
 tags:
   - bolos de potes
 email: gimartinsjpa@gmail.com
