@@ -4,23 +4,14 @@ import categories from '../../utils/categories';
 import getThemeColor from '../../utils/getThemeColor';
 import links from './content';
 
+import SocialLinks from '../SocialLinks';
+
 import * as S from './styled';
 
 const MenuLinks = ({ mobileMenu }) => {
   return (
     <S.MenuLinksWrapper className={mobileMenu && 'openMenu'}>
       <S.MenuLinksList>
-        {/* <S.MenuLinksItem>
-          <S.MenuLinksLinkA
-            href="https://docs.google.com/forms/d/e/1FAIpQLSe_VDTPLNl-JUu87fb3OLsh7Ly8FBLwWM_YvhoITJ8cPrLe5g/viewform"
-            title="Cadastre-se agora."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Cadastre-se
-          </S.MenuLinksLinkA>
-        </S.MenuLinksItem> */}
-
         {categories.map(category => (
           <S.MenuLinksItem key={category.slug} className="categoryLinkWrapper">
             <S.CategoryLink
@@ -51,6 +42,8 @@ const MenuLinks = ({ mobileMenu }) => {
             </S.MenuLinksLink>
           </S.MenuLinksItem>
         ))}
+
+        <SocialLinks />
       </S.MenuLinksList>
     </S.MenuLinksWrapper>
   );

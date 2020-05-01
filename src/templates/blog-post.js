@@ -225,8 +225,6 @@ const BlogPost = ({ data, pageContext: { nextPost, previousPost } }) => {
       </S.PostFooter>
 
       <RecommendedPosts next={nextPost} previous={previousPost} />
-
-      <Comments url={post.fields.slug} title={post.frontmatter.title} />
     </Layout>
   );
 };

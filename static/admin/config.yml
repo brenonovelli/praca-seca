@@ -2,7 +2,7 @@ backend:
   name: github
   repo: brenonovelli/praca-seca
   branch: master
-  site_domain: localhost:8000/
+  site_domain: www.pracaseca.com.br
 
 publish_mode: editorial_workflow
 media_folder: 'static/assets/img'

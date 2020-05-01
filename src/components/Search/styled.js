@@ -7,6 +7,7 @@ export const SearchWrapper = styled.section`
   flex-direction: column;
   width: 100%;
   transition: opacity 0.4s;
+
   .ais-InstantSearch__root {
     display: flex;
     flex-direction: column;
@@ -15,19 +16,23 @@ export const SearchWrapper = styled.section`
   }
   .ais-SearchBox,
   .ais-Stats {
-    padding: 0.5rem 3rem;
+    padding: 0.5rem 1rem;
+
     ${media.lessThan('large')`
       padding: 0.5rem 1rem;
     `}
   }
   .ais-SearchBox {
-    padding-top: 6rem;
+    padding-top: 3rem;
+
     ${media.lessThan('large')`
       padding-top: 1rem;
     `}
   }
   .ais-Stats {
     color: var(--texts);
+    text-align: right;
+    font-size: 0.75rem;
   }
   body#grid & {
     .ais-Hits-list {
@@ -45,14 +50,15 @@ export const SearchWrapper = styled.section`
     }
   }
   .ais-SearchBox-input {
-    background: none;
-    border: none;
-    border-bottom: 1px solid var(--borders);
+    background: var(--mediumBackground);
+    border: 1px solid var(--borders);
+    border-radius: 0.5rem;
     color: var(--texts);
     display: flex;
     font-size: 1.6rem;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     width: 100%;
+
     &::placeholder {
       color: var(--texts);
     }

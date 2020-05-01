@@ -38,12 +38,12 @@ export const MenuBarGroup = styled.div`
   ${media.greaterThan('large')`
     flex-direction: column;
 
-    &:not(:first-child):not(:last-child) {
-      border-top: var(--borders) 1px solid;
-    }
-
     &:last-child {
-      margin-top: auto;
+      height: 100%;
+      border-top: var(--borders) 1px solid;
+      span:last-child {
+        margin-top: auto;
+      }
     }
   `}
 `;

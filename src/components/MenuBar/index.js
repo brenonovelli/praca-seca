@@ -13,7 +13,6 @@ import { Bars } from 'styled-icons/fa-solid';
 import getThemeColor from '../../utils/getThemeColor';
 
 import * as S from './styled';
-import SocialLinks from '../SocialLinks';
 
 const MenuBar = ({ mobileMenu, setMobileMenu }) => {
   const [theme, setTheme] = useState(null);
@@ -60,7 +59,6 @@ const MenuBar = ({ mobileMenu, setMobileMenu }) => {
       </S.MenuBarGroup>
 
       <S.MenuBarGroup>
-        <SocialLinks />
         <S.MenuBarItem
           title="Menu"
           onClick={() => setMobileMenu(!mobileMenu)}
@@ -71,15 +69,7 @@ const MenuBar = ({ mobileMenu, setMobileMenu }) => {
       </S.MenuBarGroup>
 
       <S.MenuBarGroup>
-        <S.MenuBarItem
-          title="Mudar o tema"
-          onClick={() => {
-            window.__setPreferredTheme(isDarkMode ? 'light' : 'dark');
-          }}
-          className={theme}
-        >
-          <Light />
-        </S.MenuBarItem>
+        {/* Display */}
         <S.MenuBarItem
           title="Mudar visualização"
           onClick={() => {
@@ -89,6 +79,17 @@ const MenuBar = ({ mobileMenu, setMobileMenu }) => {
         >
           {isListMode ? <Grid /> : <List />}
         </S.MenuBarItem>
+        {/* Theme */}
+        <S.MenuBarItem
+          title="Mudar o tema"
+          onClick={() => {
+            window.__setPreferredTheme(isDarkMode ? 'light' : 'dark');
+          }}
+          className={theme}
+        >
+          <Light />
+        </S.MenuBarItem>
+        {/* Top */}
         <S.MenuBarItem
           title="Ir para o Topo"
           onClick={() => {
