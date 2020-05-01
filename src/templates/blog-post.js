@@ -8,18 +8,29 @@ import {
   PhoneOutline,
 } from 'styled-icons/evaicons-outline';
 import { Facebook, Instagram, Whatsapp } from 'styled-icons/boxicons-logos';
-
+import { ReportProblem } from 'styled-icons/material-rounded';
 import { ShippingFast, Home } from 'styled-icons/fa-solid/';
+
+import categories from '../utils/categories';
+import getThemeColor from '../utils/getThemeColor';
 
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
-
-import * as S from '../components/Post/styled';
 import RecommendedPosts from '../components/RecommendedPosts';
 import Comments from '../components/Comments';
 
+import PostTags from '../components/Post/components/PostTags';
+
+import * as S from '../components/Post/styled';
+
 const BlogPost = ({ data, pageContext: { nextPost, previousPost } }) => {
   const post = data.markdownRemark;
+
+  const { color, slug } =
+    categories.find(category => category.title === post.frontmatter.category) ||
+    null;
+
+  const { tags, delivery } = post.frontmatter;
 
   return (
     <Layout>
@@ -29,37 +40,57 @@ const BlogPost = ({ data, pageContext: { nextPost, previousPost } }) => {
         image={post.frontmatter.image}
       />
 
-      <S.PostHeader>
-        <S.PostCategory>{post.frontmatter.category}</S.PostCategory>
+      <S.PostHeader color={color}>
+        <S.PostCategories>
+          <S.PostCategory
+            to={slug}
+            cover
+            direction="left"
+            bg={getThemeColor()}
+            duration={0.6}
+          >
+            {post.frontmatter.category}
+          </S.PostCategory>
+          <S.PostSubcategory>{post.frontmatter.subcategory}</S.PostSubcategory>
+        </S.PostCategories>
+
         <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
+
         <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
-      </S.PostHeader>
 
-      <S.PostBadges>
-        {/* Delivery */}
-        {post.frontmatter.delivery !== 1 && (
-          <>
-            {post.frontmatter.delivery === 2 && (
-              <S.PostBadge className="item delivery">
-                <ShippingFast />
-                Entregas em domicílio
-              </S.PostBadge>
+        {(delivery !== '3' || tags) && (
+          <S.PostsTags>
+            {/* Delivery */}
+            {/* 1 - Entrega / 2 -  Atendimento / 3 - Não */}
+            {delivery !== '3' && (
+              <>
+                <S.PostBadges>
+                  {delivery === '1' && (
+                    <S.PostBadge className="item delivery">
+                      <ShippingFast />
+                      Entregas em domicílio
+                    </S.PostBadge>
+                  )}
+
+                  {delivery === '2' && (
+                    <S.PostBadge className="item delivery">
+                      <Home />
+                      Antendimento em domicílio
+                    </S.PostBadge>
+                  )}
+                </S.PostBadges>
+              </>
             )}
 
-            {post.frontmatter.delivery === 3 && (
-              <S.PostBadge className="item delivery">
-                <Home />
-                Antendimento em domicílio
-              </S.PostBadge>
-            )}
-          </>
+            <PostTags tags={tags} color={color} />
+          </S.PostsTags>
         )}
-      </S.PostBadges>
+      </S.PostHeader>
 
       <S.PostContacts>
         {/* Address */}
         {post.frontmatter.address && (
-          <S.PostContact className="item">
+          <S.PostContact className="item largeColumn">
             <S.IconWrapper>
               <PinOutline />
             </S.IconWrapper>
@@ -91,7 +122,7 @@ const BlogPost = ({ data, pageContext: { nextPost, previousPost } }) => {
 
         {/* Email */}
         {post.frontmatter.email && (
-          <S.PostContact className="item">
+          <S.PostContact className="item largeColumn">
             <S.IconWrapper>
               <EmailOutline />
             </S.IconWrapper>
@@ -105,7 +136,7 @@ const BlogPost = ({ data, pageContext: { nextPost, previousPost } }) => {
         {/* Site */}
         {post.frontmatter.site && (
           <S.PostContactLink
-            className="item"
+            className="item largeColumn"
             href={`https://${post.frontmatter.site}`}
             title="Site"
             target="_blank"
@@ -124,8 +155,8 @@ const BlogPost = ({ data, pageContext: { nextPost, previousPost } }) => {
         {/* Whatsapp */}
         {post.frontmatter.whatsapp && (
           <S.PostContactLink
-            className="item"
-            href={`https://api.whatsapp.com/send?phone=55${post.frontmatter.whatsapp}`}
+            className="item whatsapp"
+            href={`https://api.whatsapp.com/send?phone=55${post.frontmatter.whatsapp}&text=Olá,%20vi%20seu%20negócio%20no%20Guia%20Praça%20Seca%20e%20gostaria%20de%20mais%20informações.`}
             title="Whatsapp"
             target="_blank"
             rel="noopener noreferrer"
@@ -135,7 +166,7 @@ const BlogPost = ({ data, pageContext: { nextPost, previousPost } }) => {
             </S.IconWrapper>
 
             <S.TextWrapper>
-              <strong>Whatsapp:</strong>
+              <strong>WhatsApp:</strong>
               <span>{post.frontmatter.whatsapp}</span>
             </S.TextWrapper>
           </S.PostContactLink>
@@ -144,7 +175,7 @@ const BlogPost = ({ data, pageContext: { nextPost, previousPost } }) => {
         {/* Instagram */}
         {post.frontmatter.instagram && (
           <S.PostContactLink
-            className="item"
+            className="item instagram"
             href={`https://www.instagram.com/${post.frontmatter.instagram}`}
             title="Instagram"
             target="_blank"
@@ -163,7 +194,7 @@ const BlogPost = ({ data, pageContext: { nextPost, previousPost } }) => {
         {/* Facebook */}
         {post.frontmatter.facebook && (
           <S.PostContactLink
-            className="item"
+            className="item facebook"
             href={`https://www.fb.com/${post.frontmatter.facebook}`}
             title="Facebook"
             target="_blank"
@@ -188,10 +219,9 @@ const BlogPost = ({ data, pageContext: { nextPost, previousPost } }) => {
       )}
 
       <S.PostFooter>
-        <S.PostDate>Cadastrado em: {post.frontmatter.date}</S.PostDate>
-        <a href="/report" title="">
-          Reportar problema
-        </a>
+        <S.ReportLink to="/report">
+          <ReportProblem /> Reportar problema
+        </S.ReportLink>
       </S.PostFooter>
 
       <RecommendedPosts next={nextPost} previous={previousPost} />
@@ -211,8 +241,10 @@ export const query = graphql`
         date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
         title
         category
+        subcategory
         delivery
         description
+        tags
         address
         background
         email

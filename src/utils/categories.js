@@ -3,12 +3,7 @@ const categories = [
     title: 'Alimentação',
     slug: 'alimentacao',
     color: '#f77f00',
-    subcategories: [
-      'Caldos e sopas',
-      'Churrasco',
-      'Comida caseira',
-      'Confeitaria',
-    ],
+    subcategories: ['Caldos e sopas', 'Churrasco', 'Comida caseira'],
   },
   {
     title: 'Confeitaria',
@@ -59,4 +54,4 @@ const categories = [
   },
 ];
 
-export default categories;
+module.exports = categories;

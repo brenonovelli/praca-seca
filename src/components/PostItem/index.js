@@ -13,6 +13,7 @@ const PostItem = ({
   title,
   description,
   tags,
+  isGenericList,
 }) => {
   const { color } = categories.find(item => item.title === category);
 
@@ -26,20 +27,26 @@ const PostItem = ({
     >
       <S.PostItemWrapper>
         <S.PostCategories>
-          <S.PostCategory background={color}>{category}</S.PostCategory>
-          {subcategory && (
-            <S.PostSubCategory color={color}>{subcategory}</S.PostSubCategory>
+          {isGenericList && (
+            <S.PostCategory background={color}>{category}</S.PostCategory>
           )}
+
+          <S.PostSubCategory color={color}>
+            {subcategory || 'Geral'}
+          </S.PostSubCategory>
         </S.PostCategories>
+
         <S.PostItemInfo>
           <S.PostItemTitle>{title}</S.PostItemTitle>
           <S.PostItemDescription>{description}</S.PostItemDescription>
-          {tags && (
-            <S.PostItemTags>
-              {tags.map(item => item.length > 1 && <span>{item}</span>)}
-            </S.PostItemTags>
-          )}
         </S.PostItemInfo>
+        {tags && tags[0].length > 1 && (
+          <S.PostItemTags>
+            {tags.map(
+              item => item.length > 1 && <span key={item}>{item}</span>
+            )}
+          </S.PostItemTags>
+        )}
       </S.PostItemWrapper>
     </S.PostItemLink>
   );
@@ -50,6 +57,11 @@ PostItem.propTypes = {
   category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  isGenericList: PropTypes.bool,
+};
+
+PostItem.defaultProps = {
+  isGenericList: false,
 };
 
 export default PostItem;

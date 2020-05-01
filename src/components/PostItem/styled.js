@@ -6,11 +6,27 @@ export const PostItemLink = styled(AniLink)`
   color: var(--texts);
   display: flex;
   text-decoration: none;
+
+  body#list & {
+    border-bottom: var(--borders) 1px solid;
+  }
+
   body#grid & {
     background-color: var(--background);
   }
+
+  > section {
+    > div {
+      transition: color ease 0.2s;
+    }
+  }
+
   &:hover {
-    color: var(--highlight);
+    > section {
+      > div {
+        color: var(--highlight);
+      }
+    }
   }
 `;
 
@@ -20,33 +36,41 @@ export const PostItemWrapper = styled.section`
   align-items: flex-start;
   justify-content: flex-start;
 
-  padding: 2rem 3rem;
   width: 100%;
 
-  body#grid & {
-    border: none;
-    padding: 2rem 1rem;
-    justify-content: center;
-    align-items: flex-start;
-  }
+  padding: 2rem 1rem;
+
   ${media.lessThan('large')`
     align-items: flex-start;
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 1rem;
   `}
+
+  body#grid & {
+    border: none;
+    padding: 1.75rem 1.5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    ${media.lessThan('large')`
+      padding: 1rem;
+    `}
+  }
 `;
 
-export const PostCategories = styled.div`
+export const PostCategories = styled.header`
   display: flex;
   align-items: center;
-
-  margin-bottom: 0.7rem;
+  flex-flow: wrap;
 
   font-size: 0.875rem;
 
+  margin-bottom: 0.5rem;
+
   > div {
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.25rem;
+    white-space: nowrap;
+    margin-right: 0.5rem;
+    margin-bottom: 0.25rem;
   }
 `;
 
@@ -56,6 +80,9 @@ export const PostCategory = styled.div`
   color: var(--white);
 
   font-weight: 500;
+
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
 `;
 
 export const PostSubCategory = styled.div`
@@ -65,13 +92,15 @@ export const PostSubCategory = styled.div`
 export const PostItemInfo = styled.div``;
 
 export const PostItemTitle = styled.h1`
-  font-size: 1.6rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  margin: 0.2rem 0 0.5rem;
+  margin: 0 0 0.5rem;
+
+  color: var(--postColor);
 
   body#grid & {
     line-height: 1.1;
-    margin: 0.8rem 0;
+    margin: 0 0 0.5rem;
   }
 `;
 
@@ -81,8 +110,10 @@ export const PostItemDescription = styled.p`
   line-height: 1.2;
 `;
 
-export const PostItemTags = styled.div`
-  padding: 0.5rem 0;
+export const PostItemTags = styled.footer`
+  margin-top: 0.5rem;
+  display: flex;
+  flex-flow: wrap;
 
   span {
     background: var(--mediumBackground);

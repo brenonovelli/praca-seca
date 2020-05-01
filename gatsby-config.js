@@ -84,8 +84,8 @@ module.exports = {
         name: `Guia Praça Seca`,
         short_name: `Praça Seca`,
         start_url: `/`,
-        background_color: `#16202c`,
-        theme_color: `#16202c`,
+        background_color: `#ffffff`,
+        theme_color: `#02A2FF`,
         display: `minimal-ui`,
         icon: `src/images/gps-icon.png`, // This path is relative to the root of the site.
       },

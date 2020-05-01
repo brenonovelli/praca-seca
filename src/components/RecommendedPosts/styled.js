@@ -7,6 +7,9 @@ export const RecommendedWrapper = styled.section`
   border-top: 1px solid var(--borders);
   background: var(--mediumBackground);
   display: flex;
+
+  max-width: 70rem;
+  margin: auto;
 `;
 
 export const RecommendedLink = styled(AniLink)`
@@ -19,7 +22,7 @@ export const RecommendedLink = styled(AniLink)`
   transition: background 0.5s;
   width: 50%;
   ${media.lessThan('large')`
-    padding: 2rem 1rem;
+    padding: 1rem;
     line-height: 1.3;
     font-size: .9rem;
   `}

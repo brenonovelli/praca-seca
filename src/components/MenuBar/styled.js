@@ -15,21 +15,37 @@ export const MenuBarWrapper = styled.aside`
   transition: background 0.5s;
 
   ${media.lessThan('large')`
-    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: var(--highlight);
+
+    flex-direction: row;
+    height: 3rem;
+    width: 100vw;
+    padding: 0 1rem;
   `}
 `;
 
 export const MenuBarGroup = styled.div`
   display: flex;
-  flex-direction: column;
 
-  &:not(:first-child):not(:last-child) {
-    border-top: var(--borders) 1px solid;
-  }
+  ${media.lessThan('large')`
+    justify-content: space-around;
+    width: 100%;
+  `}
 
-  &:last-child {
-    margin-top: auto;
-  }
+  ${media.greaterThan('large')`
+    flex-direction: column;
+
+    &:not(:first-child):not(:last-child) {
+      border-top: var(--borders) 1px solid;
+    }
+
+    &:last-child {
+      margin-top: auto;
+    }
+  `}
 `;
 
 export const MenuBarLink = styled(AniLink)`
@@ -43,23 +59,41 @@ export const MenuBarLink = styled(AniLink)`
 `;
 
 export const MenuBarItem = styled.span`
-  color: var(--texts);
   cursor: pointer;
   display: block;
-  height: 3.75rem;
-  padding: 1.1rem;
+  padding: 0.25rem;
   position: relative;
-  width: 3.75rem;
-  &:hover {
-    color: var(--highlight);
-  }
+  color: var(--white);
+
+  ${media.lessThan('large')`
+    svg {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  `}
 
   &.display {
     ${media.lessThan('large')`
       display: none;
     `}
   }
+
+  &.menu {
+    ${media.greaterThan('large')`
+      display: none;
+    `}
+  }
+
   ${media.greaterThan('large')`
+    height: 3.75rem;
+    width: 3.75rem;
+    padding: 1.1rem;
+    color: var(--texts);
+
+    &:hover {
+      color: var(--highlight);
+    }
+
     &:hover {
       color: var(--highlight);
     }

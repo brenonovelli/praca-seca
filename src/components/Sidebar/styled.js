@@ -10,16 +10,18 @@ export const SidebarWrapper = styled.aside`
   justify-content: flex-start;
 
   height: 100vh;
-  padding: 2rem;
+  padding: 1rem 2rem;
   text-align: left;
   width: 20rem;
 
   ${media.lessThan('large')`
     height: 3rem;
-    padding: .5rem;
+    padding: 0 1rem;
     width: 100vw;
     flex-direction: row;
     align-items: center;
     background: var(--highlight);
+
+    z-index: 20;
   `}
 `;

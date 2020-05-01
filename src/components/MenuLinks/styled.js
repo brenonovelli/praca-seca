@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
-import { lighten } from 'polished';
 
 export const MenuLinksWrapper = styled.nav`
   ${media.lessThan('large')`
@@ -15,50 +14,76 @@ export const MenuLinksList = styled.ul`
   margin-top: 1rem;
 
   ${media.lessThan('large')`
-    display: none;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+  
+    max-width: 100vw;
+    height: 100vh;
+    margin-top: 0;
+    background: var(--mediumBackground);
+    padding: 1rem 5rem 4rem 1rem;
+    
+    box-shadow: none;
+
+    overflow: scroll;
+    transition: .5s ease left;
+
+    .openMenu & {
+      left: 0;
+      box-shadow: 0 0 5rem 5rem rgba(0, 0, 0, 0.03);
+    }
   `}
 `;
 
 export const MenuLinksItem = styled.li`
-  padding: 0.5rem 0;
-  .active {
-    color: var(--highlight);
+  padding-bottom: 0.5rem;
+
+  a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--texts);
+
+    transition: color 0.2s;
+
+    ${media.lessThan('large')`
+      font-size: .875rem;
+      padding: .5rem .75rem;
+    `}
+
+    &.active {
+      color: var(--postColor);
+      font-weight: bold;
+    }
   }
 `;
 
 export const MenuLinksLink = styled(AniLink)`
-  color: var(--texts);
-  text-decoration: none;
-  transition: color 0.5s;
   &:hover {
     color: var(--highlight);
   }
 `;
 
 export const CategoryLink = styled(AniLink)`
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.25rem;
-
-  color: var(--white);
-  background: ${props =>
+  --colorMaster: ${props =>
     props.background ? props.background : 'var(--highlight)'};
 
-  font-size: 0.875rem;
-  font-weight: 500;
-  text-decoration: none;
-
-  transition: all 0.2s;
+  border-left: 0.25rem solid var(--colorMaster);
 
   &:hover {
-    background: ${props =>
-      props.background ? lighten(0.05, props.background) : 'var(--highlight)'};
-    padding: 0.2rem 1.5rem 0.2rem 0.75rem;
+    color: var(--colorMaster);
   }
 `;
 
 export const ContentMobile = styled.div`
   display: flex;
   align-items: center;
+
+  position: relative;
+  z-index: 20;
 
   ${media.greaterThan('large')`
     display: none;

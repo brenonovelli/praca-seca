@@ -10,6 +10,10 @@ const Comments = ({ url, title }) => {
   return (
     <S.CommentsWrapper>
       <S.CommentsTitle>Comentários</S.CommentsTitle>
+      <S.CommentsDescription>
+        Os comentários são moderados e as entradas não produtivas serão
+        excluídas.
+      </S.CommentsDescription>
       <ReactDisqusComments
         shortname="guia-praca-seca"
         identifier={completeURL}

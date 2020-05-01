@@ -10,19 +10,25 @@ import * as S from '../components/ListWrapper/styled';
 
 const BlogList = ({
   data,
-  pageContext: { currentPage, numPages, pagination },
+  pageContext: { title, subcategories, color, slug },
 }) => {
   const postList = data.allMarkdownRemark.edges;
-
-  const isFirst = currentPage === 1;
-  const isLast = currentPage === numPages;
-  const prevPage = currentPage - 1 === 1 ? '/' : `/page/${currentPage - 1}`;
-  const nextPage = `/page/${currentPage + 1}`;
 
   return (
     <Layout>
       <SEO title="Home" />
 
+      <S.ListHeader color={color}>
+        <S.ListTitle>{title}</S.ListTitle>
+
+        {subcategories && subcategories.length > 0 && (
+          <S.Subcategories>
+            {subcategories.map(subcategory => (
+              <S.Subcategory key={subcategory}>{subcategory}</S.Subcategory>
+            ))}
+          </S.Subcategories>
+        )}
+      </S.ListHeader>
       <S.ListWrapper>
         {postList.map(
           ({
@@ -47,32 +53,19 @@ const BlogList = ({
               title={title}
               tags={tags}
               description={description}
-              isGenericList
             />
           )
         )}
       </S.ListWrapper>
-
-      {pagination && (
-        <Pagination
-          isFirst={isFirst}
-          isLast={isLast}
-          currentPage={currentPage}
-          numPages={numPages}
-          prevPage={prevPage}
-          nextPage={nextPage}
-        />
-      )}
     </Layout>
   );
 };
 
 export const query = graphql`
-  query PostList($skip: Int!, $limit: Int!) {
+  query CategoryList($title: String!) {
     allMarkdownRemark(
-      sort: { fields: frontmatter___date, order: DESC }
-      limit: $limit
-      skip: $skip
+      sort: { fields: frontmatter___title, order: ASC }
+      filter: { frontmatter: { category: { eq: $title } } }
     ) {
       edges {
         node {
@@ -86,6 +79,7 @@ export const query = graphql`
             image
             tags
           }
+          timeToRead
           fields {
             slug
           }

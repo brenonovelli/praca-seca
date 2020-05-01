@@ -1,17 +1,14 @@
 import React from 'react';
 
 import Profile from '../Profile';
-import Avatar from '../Avatar';
 import MenuLinks from '../MenuLinks';
 
 import * as S from './styled';
 
-const Sidebar = () => (
+const Sidebar = ({ mobileMenu }) => (
   <S.SidebarWrapper>
-    <Avatar />
-
     <Profile />
-    <MenuLinks />
+    <MenuLinks mobileMenu={mobileMenu} />
   </S.SidebarWrapper>
 );
 

@@ -8,8 +8,8 @@ tags:
   - depilação
   - massagem
 email: annahveira@gmail.com
-telefone: "21981122581"
-whatsapp: "21981122581"
+telefone: '21981122581'
+whatsapp: '21981122581'
 delivery: 2
 date: 2020-04-25T09:01:33.000Z
 ---

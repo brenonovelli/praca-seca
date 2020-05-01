@@ -8,13 +8,14 @@ import {
 
 import { Home, Grid } from 'styled-icons/boxicons-solid/';
 import { ThList as List } from 'styled-icons/typicons';
+import { Bars } from 'styled-icons/fa-solid';
 
 import getThemeColor from '../../utils/getThemeColor';
 
 import * as S from './styled';
 import SocialLinks from '../SocialLinks';
 
-const MenuBar = () => {
+const MenuBar = ({ mobileMenu, setMobileMenu }) => {
   const [theme, setTheme] = useState(null);
   const [display, setDisplay] = useState(null);
 
@@ -60,6 +61,13 @@ const MenuBar = () => {
 
       <S.MenuBarGroup>
         <SocialLinks />
+        <S.MenuBarItem
+          title="Menu"
+          onClick={() => setMobileMenu(!mobileMenu)}
+          className="menu"
+        >
+          <Bars />
+        </S.MenuBarItem>
       </S.MenuBarGroup>
 
       <S.MenuBarGroup>
@@ -81,7 +89,12 @@ const MenuBar = () => {
         >
           {isListMode ? <Grid /> : <List />}
         </S.MenuBarItem>
-        <S.MenuBarItem title="Ir para o Topo">
+        <S.MenuBarItem
+          title="Ir para o Topo"
+          onClick={() => {
+            window.scroll({ top: 0, behavior: 'smooth' });
+          }}
+        >
           <Arrow />
         </S.MenuBarItem>
       </S.MenuBarGroup>

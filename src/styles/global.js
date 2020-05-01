@@ -51,6 +51,9 @@ const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+  html {
+    background: #02A2FF;
+  }
   body {
     background: var(--background);
     line-height: 1;
@@ -85,5 +88,7 @@ const GlobalStyles = createGlobalStyle`
     --white: #fff;
     --black: #222;
   }
+
+  
 `;
 export default GlobalStyles;

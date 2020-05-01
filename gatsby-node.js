@@ -2,6 +2,8 @@ const path = require('path');
 
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+const categories = require(`./src/utils/categories`);
+
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
   const typeDefs = `
@@ -122,8 +124,9 @@ exports.createPages = ({ graphql, actions }) => {
       });
     });
 
-    const postsPerPage = 12;
+    const postsPerPage = 100;
     const numPages = Math.ceil(posts.length / postsPerPage);
+    const pagination = posts.length > postsPerPage;
 
     Array.from({ length: numPages }).forEach((_, index) => {
       createPage({
@@ -134,6 +137,20 @@ exports.createPages = ({ graphql, actions }) => {
           skip: index * postsPerPage,
           numPages,
           currentPage: index + 1,
+          pagination,
+        },
+      });
+    });
+
+    categories.forEach(category => {
+      createPage({
+        path: category.slug,
+        component: path.resolve(`./src/templates/category.js`),
+        context: {
+          title: category.title,
+          subcategories: category.subcategories,
+          color: category.color,
+          slug: category.slug,
         },
       });
     });

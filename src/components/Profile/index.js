@@ -3,6 +3,8 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import getThemeColor from '../../utils/getThemeColor';
 
+import Avatar from '../Avatar';
+
 import * as S from './styled';
 
 const Profile = () => {
@@ -30,6 +32,7 @@ const Profile = () => {
         bg={getThemeColor()}
         duration={0.6}
       >
+        <Avatar />
         <S.ProfileAuthor>{title}</S.ProfileAuthor>
       </S.ProfileLink>
       <S.ProfileDescription>{description}</S.ProfileDescription>

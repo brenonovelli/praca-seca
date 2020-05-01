@@ -1,5 +1,9 @@
 const links = [
   {
+    label: 'Ver tudo',
+    url: '/all/',
+  },
+  {
     label: 'Início',
     url: '/',
   },
