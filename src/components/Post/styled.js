@@ -459,7 +459,7 @@ export const PostFooter = styled.footer`
   padding: 1rem 1.4rem;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 
   margin-top: 1.4rem;
 
