@@ -5,10 +5,9 @@ const queries = require('./src/utils/algolia_queries');
 module.exports = {
   siteMetadata: {
     title: `Guia Praça Seca`,
-    description: `Um guia voltado para fortalecer o negócio local. Cadastre-se agora gratuitamente.`,
-    author: `@gatsbyjs`,
-    // siteUrl: `https://gatsby-blog-breno.netlify.app`,
-    siteUrl: `https://localhost:8000`,
+    description: `Um guia voltado para fortalecer o negócio local.`,
+    author: `@brenonovelli`,
+    siteUrl: process.env.GATSBY_SITE_URL,
   },
 
   plugins: [

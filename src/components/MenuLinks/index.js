@@ -10,6 +10,17 @@ const MenuLinks = ({ mobileMenu }) => {
   return (
     <S.MenuLinksWrapper className={mobileMenu && 'openMenu'}>
       <S.MenuLinksList>
+        <S.MenuLinksItem>
+          <S.MenuLinksLink
+            href="https://docs.google.com/forms/d/e/1FAIpQLSe_VDTPLNl-JUu87fb3OLsh7Ly8FBLwWM_YvhoITJ8cPrLe5g/viewform"
+            title="Cadastre-se agora."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Cadastre-se
+          </S.MenuLinksLink>
+        </S.MenuLinksItem>
+
         {categories.map(category => (
           <S.MenuLinksItem key={category.slug} className="categoryLinkWrapper">
             <S.CategoryLink
