@@ -11,10 +11,10 @@ const links = [
   //   label: 'Sobre nós',
   //   url: '/about/',
   // },
-  // {
-  //   label: 'Cadastre-se',
-  //   url: '/search/',
-  // },
+  {
+    label: 'Cadastre-se',
+    url: '/cadastro/',
+  },
 ];
 
 export default links;

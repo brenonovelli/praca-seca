@@ -43,7 +43,7 @@ export const PostItemWrapper = styled.section`
   ${media.lessThan('large')`
     align-items: flex-start;
     flex-direction: column;
-    padding: 1rem;
+    padding: 1rem 1rem .5rem;
   `}
 
   body#grid & {
@@ -58,41 +58,10 @@ export const PostItemWrapper = styled.section`
   }
 `;
 
-export const PostCategories = styled.header`
-  display: flex;
-  align-items: center;
-  flex-flow: wrap;
-
-  font-size: 0.875rem;
-
-  margin-bottom: 0.5rem;
-
-  > div {
-    white-space: nowrap;
-    margin-right: 0.5rem;
-    margin-bottom: 0.25rem;
-  }
-`;
-
-export const PostCategory = styled.div`
-  background: ${props =>
-    props.background ? props.background : 'var(--highlight)'};
-  color: var(--white);
-
-  font-weight: 500;
-
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.25rem;
-`;
-
-export const PostSubCategory = styled.div`
-  color: ${props => (props.color ? props.color : 'var(--texts)')};
-`;
-
 export const PostItemInfo = styled.div``;
 
 export const PostItemTitle = styled.h1`
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin: 0 0 0.5rem;
 
@@ -106,20 +75,49 @@ export const PostItemTitle = styled.h1`
 
 export const PostItemDescription = styled.p`
   font-size: 0.875rem;
-  font-weight: 300;
   line-height: 1.2;
 `;
 
 export const PostItemTags = styled.footer`
   margin-top: 0.5rem;
   display: flex;
+  align-items: center;
   flex-flow: wrap;
 
-  span {
-    background: var(--mediumBackground);
-    font-size: 0.75rem;
-    padding: 0.15rem 0.25rem;
-    margin: 0 0.25rem 0.25rem 0;
-    border-radius: 0.25rem;
+  div {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    display: inline-flex;
+    align-items: center;
   }
+
+  > div {
+    white-space: nowrap;
+  }
+`;
+
+export const PostTag = styled.div`
+  background: var(--mediumBackground);
+  border-radius: 0.25rem;
+  padding: 0.2rem 0.5rem;
+  margin-right: 0.25rem;
+`;
+
+export const PostCategory = styled.div`
+  padding: 0.25rem 0 0.25rem 0.5rem;
+
+  border-left: 0.25rem solid
+    ${props => (props.background ? props.background : 'var(--highlight)')};
+  color: var(--texts);
+
+  font-weight: 500;
+
+  svg {
+    width: 0.5rem;
+    margin: 0 0.5rem;
+  }
+`;
+
+export const PostSubCategory = styled.div`
+  margin-right: 0.5rem;
 `;

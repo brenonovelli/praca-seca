@@ -24,7 +24,7 @@ export const ProfileLink = styled(AniLink)`
   `}
 
   &:hover {
-    color: var(--highlight);
+    text-decoration: underline;
   }
 `;
 

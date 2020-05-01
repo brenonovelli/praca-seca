@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { ChevronRight } from 'styled-icons/fa-solid/';
 import categories from '../../utils/categories';
 import getThemeColor from '../../utils/getThemeColor';
 
@@ -26,27 +27,31 @@ const PostItem = ({
       duration={0.6}
     >
       <S.PostItemWrapper>
-        <S.PostCategories>
+        <S.PostItemInfo>
+          <S.PostItemTitle>{title}</S.PostItemTitle>
+          <S.PostItemDescription>{description}</S.PostItemDescription>
+        </S.PostItemInfo>
+
+        <S.PostItemTags>
           {isGenericList && (
-            <S.PostCategory background={color}>{category}</S.PostCategory>
+            <>
+              <S.PostCategory background={color}>
+                {category} <ChevronRight />
+              </S.PostCategory>
+            </>
           )}
 
           <S.PostSubCategory color={color}>
             {subcategory || 'Geral'}
           </S.PostSubCategory>
-        </S.PostCategories>
 
-        <S.PostItemInfo>
-          <S.PostItemTitle>{title}</S.PostItemTitle>
-          <S.PostItemDescription>{description}</S.PostItemDescription>
-        </S.PostItemInfo>
-        {tags && tags[0].length > 1 && (
-          <S.PostItemTags>
-            {tags.map(
-              item => item.length > 1 && <span key={item}>{item}</span>
+          {tags &&
+            tags[0].length > 1 &&
+            tags.map(
+              item =>
+                item.length > 1 && <S.PostTag key={item}>{item}</S.PostTag>
             )}
-          </S.PostItemTags>
-        )}
+        </S.PostItemTags>
       </S.PostItemWrapper>
     </S.PostItemLink>
   );

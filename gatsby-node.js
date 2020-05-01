@@ -126,7 +126,7 @@ exports.createPages = ({ graphql, actions }) => {
       });
     });
 
-    const postsPerPage = 100;
+    const postsPerPage = 12;
     const numPages = Math.ceil(posts.length / postsPerPage);
     const pagination = posts.length > postsPerPage;
 
