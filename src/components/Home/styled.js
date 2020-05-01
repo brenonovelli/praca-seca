@@ -34,7 +34,10 @@ export const Header = styled.header`
   }
 `;
 
-export const Main = styled.main``;
+export const Main = styled.main`
+  max-width: 60rem;
+  margin: 0 auto;
+`;
 
 export const SearchBox = styled(Link)`
   display: flex;
