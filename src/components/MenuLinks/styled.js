@@ -16,21 +16,27 @@ export const MenuLinksList = styled.ul`
     position: fixed;
     top: 0;
     left: -100vw;
+    z-index: 0;
   
     max-width: 100vw;
     height: 100vh;
     margin-top: 0;
     background: var(--mediumBackground);
-    padding: 1rem 5rem 4rem 1rem;
+    padding: 4rem 5rem 4rem 1rem;
     
     box-shadow: none;
 
     overflow: scroll;
     transition: .5s ease left;
 
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+
     .openMenu & {
       left: 0;
-      box-shadow: 0 0 5rem 5rem rgba(0, 0, 0, 0.03);
+      box-shadow: 0 0 3rem 2rem rgba(0,0,0,0.3);
     }
   `}
 `;

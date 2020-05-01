@@ -23,5 +23,20 @@ export const SidebarWrapper = styled.aside`
     background: var(--highlight);
 
     z-index: 20;
+
+    > section{
+      position: relative;
+    }
+
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 3rem;
+      background: var(--highlight);
+      z-index: 0;
+    }
   `}
 `;

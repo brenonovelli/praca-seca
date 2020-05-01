@@ -473,7 +473,9 @@ export const PostFooter = styled.footer`
 `;
 
 export const ReportLink = styled(Link)`
-  border-bottom: 1px dashed var(--highlight);
+  display: none;
+
+  /* border-bottom: 1px dashed var(--highlight);
   color: var(--highlight);
 
   display: inline-flex;
@@ -493,5 +495,5 @@ export const ReportLink = styled(Link)`
     ${media.lessThan('large')`
       width: 1rem;
     `}
-  }
+  } */
 `;

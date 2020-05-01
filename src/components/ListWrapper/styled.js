@@ -1,7 +1,12 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const ListHeader = styled.header`
   padding: 2rem 1rem 0;
+  
+  ${media.lessThan('large')`
+    padding: 0 1rem;
+  `}
 
   --colorCategory: ${props => (props.color ? props.color : `var(--highlight)`)};
 `;
@@ -11,6 +16,11 @@ export const ListTitle = styled.h1`
   font-weight: 700;
   margin: 1rem 0;
   color: var(--postColor);
+
+  ${media.lessThan('large')`
+    font-size: 1.5rem;
+    margin: 0 0 .5rem;
+  `}
 `;
 
 export const Subcategories = styled.nav`
@@ -18,8 +28,8 @@ export const Subcategories = styled.nav`
 `;
 
 export const Subcategory = styled.a`
-  background: var(--colorCategory);
-  color: var(--white);
+  border: 1px solid var(--colorCategory);
+  color: var(--texts);
 
   padding: 0.25rem 0.5rem;
   margin: 0 0.25rem 0.25rem 0;

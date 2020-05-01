@@ -4,13 +4,12 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 import PostItem from '../components/PostItem';
-import Pagination from '../components/Pagination';
 
 import * as S from '../components/ListWrapper/styled';
 
 const BlogList = ({
   data,
-  pageContext: { title, subcategories, color, slug },
+  pageContext: { title: cTitle, subcategories, color },
 }) => {
   const postList = data.allMarkdownRemark.edges;
 
@@ -19,7 +18,7 @@ const BlogList = ({
       <SEO title="Home" />
 
       <S.ListHeader color={color}>
-        <S.ListTitle>{title}</S.ListTitle>
+        <S.ListTitle>{cTitle}</S.ListTitle>
 
         {subcategories && subcategories.length > 0 && (
           <S.Subcategories>

@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 import {
   Bulb as Light,
-  SearchAlt2 as Search,
   UpArrowAlt as Arrow,
 } from 'styled-icons/boxicons-regular/';
+
+import { Search } from 'styled-icons/material-rounded';
 
 import { Home, Grid } from 'styled-icons/boxicons-solid/';
 import { ThList as List } from 'styled-icons/typicons';

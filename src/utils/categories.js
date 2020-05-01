@@ -1,56 +1,75 @@
+const {
+  Fastfood,
+  Cake,
+  School,
+  Computer,
+  Spa,
+  Store,
+  PersonPinCircle,
+} = require('styled-icons/material-rounded');
+const { Hammer } = require('styled-icons/fa-solid');
+
 const categories = [
   {
     title: 'Alimentação',
     slug: 'alimentacao',
-    color: '#f77f00',
+    color: '#f26419',
     subcategories: ['Caldos e sopas', 'Churrasco', 'Comida caseira'],
+    icon: Fastfood,
   },
   {
     title: 'Confeitaria',
     slug: 'confeitaria',
-    color: '#ff1654',
+    color: '#472d30',
     subcategories: ['Bolos', 'Doces'],
+    icon: Cake,
   },
   {
     title: 'Construção e reformas',
     slug: 'construcao_e_reformas',
-    color: '#457b9d',
+    color: '#283845',
     subcategories: ['Vidraçaria'],
+    icon: Hammer,
   },
 
   {
     title: 'Educação',
     slug: 'educacao',
-    color: '#02c39a',
+    color: '#0466c8',
     subcategories: ['Aulas particulares'],
+    icon: School,
   },
 
   {
     title: 'Estética e Beleza',
     slug: 'estetica_e_beleza',
-    color: '#9d8189',
+    color: '#00a896',
     subcategories: [],
+    icon: Spa,
   },
 
   {
     title: 'Informática',
     slug: 'informatica',
-    color: '#444444',
+    color: '#50514f',
     subcategories: ['Recarga de cartuchos'],
+    icon: Computer,
   },
 
   {
     title: 'Lojas e Comércios',
     slug: 'lojas_e_comercios',
-    color: '#9e0059',
+    color: '#f25f5c',
     subcategories: ['Açougue e casa de carnes'],
+    icon: Store,
   },
 
   {
     title: 'Serviços Profissionais',
     slug: 'servicos_profissionais',
-    color: '#086375',
+    color: '#9e0059',
     subcategories: ['Fotografia e filmagem'],
+    icon: PersonPinCircle,
   },
 ];
 
