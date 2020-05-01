@@ -67,6 +67,12 @@ export const MenuLinksLink = styled(AniLink)`
   }
 `;
 
+export const MenuLinksLinkA = styled.a`
+  &:hover {
+    color: var(--highlight);
+  }
+`;
+
 export const CategoryLink = styled(AniLink)`
   --colorMaster: ${props =>
     props.background ? props.background : 'var(--highlight)'};

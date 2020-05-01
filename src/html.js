@@ -5,6 +5,22 @@ export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
       <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-165310104-1"
+        />
+        <script
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{
+            __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-165310104-1');`,
+          }}
+        />
+
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
@@ -36,7 +52,8 @@ export default function HTML(props) {
                   localStorage.setItem('theme', newTheme);
                 } catch (err) {}
               }
-              setTheme(preferredTheme || 'dark');
+              setTheme(preferredTheme || 'light');
+
               window.__onDisplayChange = function() {};
               function setDisplay(newDisplay) {
                 window.__display = newDisplay;
@@ -61,7 +78,7 @@ export default function HTML(props) {
         />
         {props.preBodyComponents}
         <noscript key="noscript" id="gatsby-noscript">
-          This app works best with JavaScript enabled.
+          Esse aplicativo funciona melhor com o javascript habilitado.
         </noscript>
         <div
           key="body"

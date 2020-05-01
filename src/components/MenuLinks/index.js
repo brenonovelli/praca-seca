@@ -11,14 +11,14 @@ const MenuLinks = ({ mobileMenu }) => {
     <S.MenuLinksWrapper className={mobileMenu && 'openMenu'}>
       <S.MenuLinksList>
         <S.MenuLinksItem>
-          <S.MenuLinksLink
+          <S.MenuLinksLinkA
             href="https://docs.google.com/forms/d/e/1FAIpQLSe_VDTPLNl-JUu87fb3OLsh7Ly8FBLwWM_YvhoITJ8cPrLe5g/viewform"
             title="Cadastre-se agora."
             target="_blank"
             rel="noopener noreferrer"
           >
             Cadastre-se
-          </S.MenuLinksLink>
+          </S.MenuLinksLinkA>
         </S.MenuLinksItem>
 
         {categories.map(category => (

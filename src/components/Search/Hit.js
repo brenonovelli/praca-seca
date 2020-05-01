@@ -10,6 +10,9 @@ const Hit = ({ hit }) => (
     date={hit.date}
     description={hit.description}
     category={hit.category}
+    subcategory={hit.subcategory}
+    tags={hit.tags}
+    isGenericList
   />
 );
 
