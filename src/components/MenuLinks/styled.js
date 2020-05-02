@@ -58,34 +58,26 @@ export const MenuLinksItem = styled.li`
       font-size: .875rem;
       padding: .5rem .75rem;
     `}
-
+    &:hover {
+      color: var(--highlight);
+    }
     &.active {
       color: var(--postColor);
       font-weight: bold;
     }
   }
-`;
 
-export const MenuLinksLink = styled(AniLink)`
-  &:hover {
-    color: var(--highlight);
-  }
-`;
+  &.categoryLinkWrapper {
+    --colorMaster: ${props =>
+      props.background ? props.background : 'var(--highlight)'};
 
-export const MenuLinksLinkA = styled.a`
-  &:hover {
-    color: var(--highlight);
-  }
-`;
+    a {
+      border-left: 0.25rem solid var(--colorMaster);
 
-export const CategoryLink = styled(AniLink)`
-  --colorMaster: ${props =>
-    props.background ? props.background : 'var(--highlight)'};
-
-  border-left: 0.25rem solid var(--colorMaster);
-
-  &:hover {
-    color: var(--colorMaster);
+      &:hover {
+        color: var(--colorMaster);
+      }
+    }
   }
 `;
 

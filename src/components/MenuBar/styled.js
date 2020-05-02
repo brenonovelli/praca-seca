@@ -46,14 +46,14 @@ export const MenuBarGroup = styled.div`
       }
     }
   `}
-`;
 
-export const MenuBarLink = styled(AniLink)`
-  display: block;
+  .anilink {
+    display: block;
 
-  &.active {
-    span {
-      color: var(--highlight);
+    &.active {
+      span {
+        color: var(--highlight);
+      }
     }
   }
 `;

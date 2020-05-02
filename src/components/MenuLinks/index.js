@@ -1,4 +1,5 @@
 import React from 'react';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import categories from '../../utils/categories';
 import getThemeColor from '../../utils/getThemeColor';
@@ -13,24 +14,27 @@ const MenuLinks = ({ mobileMenu }) => {
     <S.MenuLinksWrapper className={mobileMenu && 'openMenu'}>
       <S.MenuLinksList>
         {categories.map(category => (
-          <S.MenuLinksItem key={category.slug} className="categoryLinkWrapper">
-            <S.CategoryLink
+          <S.MenuLinksItem
+            key={category.slug}
+            className="categoryLinkWrapper"
+            background={category.color}
+          >
+            <AniLink
               cover
               direction="left"
               bg={getThemeColor()}
-              background={category.color}
               duration={0.6}
               to={category.slug}
               activeClassName="active"
             >
               {category.title}
-            </S.CategoryLink>
+            </AniLink>
           </S.MenuLinksItem>
         ))}
 
         {links.map(link => (
           <S.MenuLinksItem key={link.label}>
-            <S.MenuLinksLink
+            <AniLink
               cover
               direction="left"
               bg={getThemeColor()}
@@ -39,7 +43,7 @@ const MenuLinks = ({ mobileMenu }) => {
               activeClassName="active"
             >
               {link.label}
-            </S.MenuLinksLink>
+            </AniLink>
           </S.MenuLinksItem>
         ))}
 

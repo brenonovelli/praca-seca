@@ -11,6 +11,7 @@ import { Home, Grid } from 'styled-icons/boxicons-solid/';
 import { ThList as List } from 'styled-icons/typicons';
 import { Bars } from 'styled-icons/fa-solid';
 
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import getThemeColor from '../../utils/getThemeColor';
 
 import * as S from './styled';
@@ -33,30 +34,32 @@ const MenuBar = ({ mobileMenu, setMobileMenu }) => {
   return (
     <S.MenuBarWrapper>
       <S.MenuBarGroup>
-        <S.MenuBarLink
+        <AniLink
           to="/"
           cover
           direction="right"
           bg={getThemeColor()}
           duration={0.6}
           title="Voltar para Home"
+          className="anilink"
         >
           <S.MenuBarItem>
             <Home />
           </S.MenuBarItem>
-        </S.MenuBarLink>
-        <S.MenuBarLink
+        </AniLink>
+        <AniLink
           to="/search/"
           cover
           direction="right"
           bg={getThemeColor()}
           duration={0.6}
           title="Pesquisar"
+          className="anilink"
         >
           <S.MenuBarItem>
             <Search />
           </S.MenuBarItem>
-        </S.MenuBarLink>
+        </AniLink>
       </S.MenuBarGroup>
 
       <S.MenuBarGroup>

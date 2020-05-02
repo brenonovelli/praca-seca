@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import getThemeColor from '../../utils/getThemeColor';
 
@@ -25,16 +26,17 @@ const Profile = () => {
 
   return (
     <S.ProfileWrapper>
-      <S.ProfileLink
+      <AniLink
         to="/"
         cover
         direction="left"
         bg={getThemeColor()}
         duration={0.6}
+        className="anilink"
       >
         <Avatar />
         <S.ProfileAuthor>{title}</S.ProfileAuthor>
-      </S.ProfileLink>
+      </AniLink>
       <S.ProfileDescription>{description}</S.ProfileDescription>
     </S.ProfileWrapper>
   );

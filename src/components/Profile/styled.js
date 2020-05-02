@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 export const ProfileWrapper = styled.section`
   color: var(--texts);
@@ -10,21 +9,21 @@ export const ProfileWrapper = styled.section`
     height: 3rem;
     justify-content: center;
   `}
-`;
 
-export const ProfileLink = styled(AniLink)`
-  color: var(--texts);
-  text-decoration: none;
-  transition: color 0.5s;
+  .anilink {
+    color: var(--texts);
+    text-decoration: none;
+    transition: color 0.5s;
 
-  ${media.lessThan('large')`
+    ${media.lessThan('large')`
     display: flex;
     text-align: left;
     color: var(--white);
   `}
 
-  &:hover {
-    text-decoration: underline;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
 

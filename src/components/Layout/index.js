@@ -14,10 +14,13 @@ const Layout = ({ children }) => {
   return (
     <S.LayoutWrapper>
       <GlobalStyles />
+
       <TransitionPortal level="top">
         <Sidebar mobileMenu={mobileMenu} />
       </TransitionPortal>
+
       <S.LayoutMain>{children}</S.LayoutMain>
+
       <TransitionPortal level="top">
         <MenuBar mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} />
       </TransitionPortal>

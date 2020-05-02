@@ -67,32 +67,32 @@ const BlogList = ({
   );
 };
 
-export const query = graphql`
-  query PostList($skip: Int!, $limit: Int!) {
-    allMarkdownRemark(
-      sort: { fields: frontmatter___date, order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
-      edges {
-        node {
-          frontmatter {
-            background
-            category
-            subcategory
-            date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
-            description
-            title
-            image
-            tags
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query PostList($skip: Int!, $limit: Int!) {
+//     allMarkdownRemark(
+//       sort: { fields: frontmatter___date, order: DESC }
+//       limit: $limit
+//       skip: $skip
+//     ) {
+//       edges {
+//         node {
+//           frontmatter {
+//             background
+//             category
+//             subcategory
+//             date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+//             description
+//             title
+//             image
+//             tags
+//           }
+//           fields {
+//             slug
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
 
 export default BlogList;

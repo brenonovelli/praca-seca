@@ -1,6 +1,8 @@
 import React from 'react';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import { Search } from 'styled-icons/material-rounded';
+
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 import categories from '../utils/categories';
@@ -31,7 +33,7 @@ const IndexPage = () => {
 
             return (
               <S.Category key={category.slug} background={category.color}>
-                <S.CategoryLink
+                <AniLink
                   cover
                   direction="left"
                   bg={getThemeColor()}
@@ -43,7 +45,7 @@ const IndexPage = () => {
                     <Icon />
                   </S.IconWrapper>
                   {category.title}
-                </S.CategoryLink>
+                </AniLink>
               </S.Category>
             );
           })}

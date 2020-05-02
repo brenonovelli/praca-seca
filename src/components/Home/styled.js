@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { Link } from 'gatsby';
+import { lighten } from 'polished';
 
 export const Header = styled.header`
   color: var(--postColor);
@@ -75,27 +75,27 @@ export const Category = styled.li`
     props.background ? props.background : 'var(--highlight)'};
 
   list-style: none;
-`;
 
-export const CategoryLink = styled(AniLink)`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-  width: 100%;
-  height: 8rem;
-  padding: 1rem;
+    width: 100%;
+    height: 8rem;
+    padding: 1rem;
 
-  border-radius: 0.5rem;
-  border-left: 0.25rem solid var(--colorMaster);
+    border-radius: 0.5rem;
 
-  background: var(--colorMaster);
+    background: var(--colorMaster);
 
-  color: var(--white);
-  font-size: 1rem;
-  text-decoration: none;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+  }
 `;
 
 export const IconWrapper = styled.div`
