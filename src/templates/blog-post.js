@@ -100,12 +100,12 @@ const BlogPost = ({ data, pageContext: { nextPost, previousPost } }) => {
           </S.PostContact>
         )}
 
-        {/* Phone */}
-        {post.frontmatter.phone && (
+        {/* Telefone */}
+        {post.frontmatter.telefone && (
           <S.PostContactLink
             className="item"
-            href={`tel:${post.frontmatter.phone}`}
-            title="Phone"
+            href={`tel:${post.frontmatter.telefone}`}
+            title="Telefone"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -113,7 +113,7 @@ const BlogPost = ({ data, pageContext: { nextPost, previousPost } }) => {
               <PhoneOutline />
             </S.IconWrapper>
             <S.TextWrapper>
-              <strong>Phone:</strong>
+              <strong>Telefone:</strong>
               <span>{post.frontmatter.telefone}</span>
             </S.TextWrapper>
           </S.PostContactLink>

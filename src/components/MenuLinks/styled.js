@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 export const MenuLinksWrapper = styled.nav`
   ${media.lessThan('large')`
@@ -16,7 +15,7 @@ export const MenuLinksList = styled.ul`
     position: fixed;
     top: 0;
     left: -100vw;
-    z-index: 0;
+    z-index: -1;
   
     max-width: 100vw;
     height: 100vh;

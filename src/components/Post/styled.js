@@ -71,12 +71,14 @@ export const PostTitle = styled.h1`
 
 export const PostDescription = styled.p`
   font-size: 1.25rem;
-  font-weight: 200;
+  font-weight: 400;
   padding: 0 1.4rem 1.4rem;
 
   line-height: 1;
 
   border-bottom: var(--borders) 1px solid;
+
+  color: var(--texts);
 
   ${media.lessThan('large')`
     padding: 0 1rem 1rem;
@@ -261,7 +263,7 @@ export const IconWrapper = styled.div`
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.069rem;
   word-break: break-word;
   padding: 0 0 0 1rem;
@@ -273,7 +275,7 @@ export const TextWrapper = styled.div`
   }
   span {
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 400;
     color: var(--postColor);
   }
 
@@ -315,7 +317,7 @@ export const MainContent = styled.section`
   .button-post {
     color: var(--postColor);
     font-size: 1.25rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.7;
     letter-spacing: 0.069rem;
     padding: 0 1.4rem;

@@ -68,7 +68,7 @@ const categories = [
     title: 'Serviços Profissionais',
     slug: 'servicos_profissionais',
     color: '#9e0059',
-    subcategories: ['Fotografia e filmagem'],
+    subcategories: ['Fotografia e filmagem', 'Insulfilm'],
     icon: PersonPinCircle,
   },
 ];

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
 import { Link } from 'gatsby';
-import { lighten } from 'polished';
 
 export const Header = styled.header`
   color: var(--postColor);
@@ -29,7 +28,7 @@ export const Header = styled.header`
   p {
     font-size: 1rem;
     color: var(--texts);
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.25;
   }
 `;

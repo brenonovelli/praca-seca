@@ -39,6 +39,8 @@ const BlogList = ({
                 description,
                 title,
                 tags,
+                telefone,
+                whatsapp,
               },
               fields: { slug },
             },
@@ -52,6 +54,8 @@ const BlogList = ({
               title={title}
               tags={tags}
               description={description}
+              telefone={telefone}
+              whatsapp={whatsapp}
             />
           )
         )}
@@ -77,6 +81,8 @@ export const query = graphql`
             title
             image
             tags
+            telefone
+            whatsapp
           }
           timeToRead
           fields {
