@@ -1,6 +1,6 @@
 const links = [
   {
-    label: 'Ver tudo',
+    label: 'Ver todos',
     url: '/all/',
   },
   {

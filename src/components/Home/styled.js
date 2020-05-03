@@ -73,7 +73,7 @@ export const CategoriesList = styled.ul`
   display: grid;
   grid-gap: 0.5rem;
   /* grid-template-columns: 1fr 1fr; */
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin: 1rem auto;
   padding: 0 1rem;
 

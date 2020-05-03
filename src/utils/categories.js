@@ -7,7 +7,7 @@ const {
   Store,
   PersonPinCircle,
 } = require('styled-icons/material-rounded');
-const { Hammer } = require('styled-icons/fa-solid');
+const { Hammer, Heartbeat } = require('styled-icons/fa-solid');
 
 const categories = [
   {
@@ -63,7 +63,13 @@ const categories = [
     subcategories: ['Açougue e casa de carnes'],
     icon: Store,
   },
-
+  {
+    title: 'Saúde',
+    slug: 'saude',
+    color: '#B30000',
+    subcategories: ['Psicologia'],
+    icon: Heartbeat,
+  },
   {
     title: 'Serviços Profissionais',
     slug: 'servicos_profissionais',

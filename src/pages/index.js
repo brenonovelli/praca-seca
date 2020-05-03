@@ -1,7 +1,7 @@
 import React from 'react';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
-import { Search } from 'styled-icons/material-rounded';
+import { Search, ClearAll } from 'styled-icons/material-rounded';
 
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
@@ -48,7 +48,6 @@ const IndexPage = () => {
                   bg={getThemeColor()}
                   duration={0.6}
                   to={category.slug}
-                  activeClassName="active"
                 >
                   <S.IconWrapper>
                     <Icon />
@@ -58,6 +57,20 @@ const IndexPage = () => {
               </S.Category>
             );
           })}
+          <S.Category>
+            <AniLink
+              cover
+              direction="left"
+              bg={getThemeColor()}
+              duration={0.6}
+              to="all"
+            >
+              <S.IconWrapper>
+                <ClearAll />
+              </S.IconWrapper>
+              Ver todos
+            </AniLink>
+          </S.Category>
         </S.CategoriesList>
       </S.Main>
     </Layout>
