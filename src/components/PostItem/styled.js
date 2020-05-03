@@ -17,7 +17,7 @@ export const PostItem = styled.article`
 
   body#list & {
     ${media.greaterThan('medium')`
-      border-bottom: var(--borders) 1px solid;
+      
     `}
   }
 

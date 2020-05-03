@@ -46,9 +46,9 @@ const MenuLinks = ({ mobileMenu }) => {
             </AniLink>
           </S.MenuLinksItem>
         ))}
-
-        <SocialLinks />
       </S.MenuLinksList>
+
+      <SocialLinks />
     </S.MenuLinksWrapper>
   );
 };

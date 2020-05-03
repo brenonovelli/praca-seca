@@ -18,7 +18,8 @@ const IndexPage = () => {
         <h1>Bem-vindo ao Guia Praça Seca.</h1>
         <p>
           Um guia feito para fortalecer o vínculo dos moradores com os negócios
-          locais. Qualquer tipo de negócio: físico, serviço ou virtual.
+          locais. Qualquer tipo de negócio: físico, serviço ou virtual. Cadastre
+          seu negócio gratuitamente.
         </p>
       </S.Header>
 

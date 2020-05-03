@@ -3,15 +3,6 @@ import media from 'styled-media-query';
 
 export const MenuLinksWrapper = styled.nav`
   ${media.lessThan('large')`
-    margin-left: auto;
-  `}
-`;
-
-export const MenuLinksList = styled.ul`
-  font-size: 1.2rem;
-  margin-top: 1rem;
-
-  ${media.lessThan('large')`
     position: fixed;
     top: 0;
     left: -100vw;
@@ -33,11 +24,16 @@ export const MenuLinksList = styled.ul`
     }
     -ms-overflow-style: none;
 
-    .openMenu & {
+    &.openMenu {
       left: 0;
       box-shadow: 0 0 3rem 2rem rgba(0,0,0,0.3);
     }
   `}
+`;
+
+export const MenuLinksList = styled.ul`
+  font-size: 1.2rem;
+  margin-top: 1rem;
 `;
 
 export const MenuLinksItem = styled.li`

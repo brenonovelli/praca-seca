@@ -1,7 +1,4 @@
 import styled from 'styled-components';
-import media from 'styled-media-query';
-
-export const SocialLinksWrapper = styled.nav``;
 
 export const SocialLinksList = styled.ul`
   display: flex;

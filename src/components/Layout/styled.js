@@ -13,6 +13,11 @@ export const LayoutMain = styled.section`
   width: 100%;
   transition: background, color 0.5s;
 
+  body#list & {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
   body#grid & {
     grid-template-areas:
       'posts'

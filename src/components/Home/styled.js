@@ -64,9 +64,13 @@ export const CategoriesList = styled.ul`
   display: grid;
   grid-gap: 0.5rem;
   /* grid-template-columns: 1fr 1fr; */
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   margin: 1rem auto;
   padding: 0 1rem;
+
+  ${media.lessThan('large')`
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  `}
 `;
 
 export const Category = styled.li`
@@ -87,13 +91,51 @@ export const Category = styled.li`
     padding: 1rem;
 
     border-radius: 0.5rem;
+    box-shadow: none;
 
-    background: var(--colorMaster);
+    background: var(--mediumBackground);
 
-    color: var(--white);
+    color: var(--texts);
     font-weight: 700;
     font-size: 1rem;
     text-decoration: none;
+
+    position: relative;
+
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    &:after {
+      content: '';
+      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+
+      width: 0;
+      height: 0.25rem;
+      opacity: 0;
+
+      border-radius: 0.25rem;
+
+      background: var(--colorMaster);
+    }
+
+    &:hover {
+      box-shadow: 0 0 2rem 1rem rgba(0, 0, 0, 0.03);
+      background: var(--background);
+      color: var(--postColor);
+
+      svg {
+        color: var(--postColor);
+      }
+
+      &:after {
+        width: 50%;
+        opacity: 1;
+      }
+    }
   }
 `;
 
@@ -105,6 +147,7 @@ export const IconWrapper = styled.div`
 
   svg {
     width: 2.5rem;
-    color: var(--white);
+    color: var(--texts);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 `;
