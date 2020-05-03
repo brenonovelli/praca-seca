@@ -41,6 +41,7 @@ const MenuLinks = ({ mobileMenu }) => {
               duration={0.6}
               to={link.url}
               activeClassName="active"
+              className={link.className && link.className}
             >
               {link.label}
             </AniLink>

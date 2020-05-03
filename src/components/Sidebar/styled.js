@@ -20,7 +20,7 @@ export const SidebarWrapper = styled.aside`
     width: 100vw;
     flex-direction: row;
     align-items: center;
-    background: var(--highlight);
+    background: var(--cornersBars);
 
     z-index: 20;
 
@@ -35,7 +35,7 @@ export const SidebarWrapper = styled.aside`
       left: 0;
       width: 100vw;
       height: 3rem;
-      background: var(--highlight);
+      background: var(--cornersBars);
       z-index: 0;
     }
   `}

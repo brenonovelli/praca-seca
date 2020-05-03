@@ -5,6 +5,7 @@ const GlobalStyles = createGlobalStyle`
    v2.0 | 20110126
    License: none (public domain)
   */
+  
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -72,20 +73,24 @@ const GlobalStyles = createGlobalStyle`
     --texts: #8899a6;
     --postColor: #fff;
     --highlight: #02A2FF;
+    --auxiliarBlue: #005A8F;
+    --cornersBars: #005A8F;
     --highlight2: #F66C52;
-    --mediumBackground: #192734;
     --background: #16202c;
+    --mediumBackground: #192734;
     --white: #fff;
     --black: #222;
   }
   body.light {
     --borders: #dedede;
-    --postColor: #333;
+    --postColor: #222;
     --texts: #555555;
     --highlight: #02A2FF;
+    --auxiliarBlue: #005A8F;
     --highlight2: #F66C52;
-    --mediumBackground: #f0f0f3;
     --background: #fff;
+    --mediumBackground: #f0f0f3;
+    --cornersBars: #02A2FF;
     --white: #fff;
     --black: #222;
   }

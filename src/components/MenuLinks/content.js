@@ -4,8 +4,9 @@ const links = [
     url: '/all/',
   },
   {
-    label: 'Cadastre-se',
+    label: 'Cadastre seu negócio',
     url: '/cadastro/',
+    className: 'button',
   },
 ];
 

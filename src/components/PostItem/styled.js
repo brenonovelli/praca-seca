@@ -51,19 +51,14 @@ export const PostItemWrapper = styled.section`
 
   ${media.greaterThan('large')`
     padding: 2rem 1rem;
-  `}
-  
 
-  body#grid & {
-    justify-content: flex-start;
-    align-items: flex-start;
-    border: none;
-    padding: 1rem;
-
-    ${media.greaterThan('large')`
+    body#grid & {
+      justify-content: flex-start;
+      align-items: flex-start;
+      border: none;
       padding: 1.75rem 1.5rem;
-    `}
-  }
+    }
+  `}
 `;
 
 export const PostItemHeader = styled.header`
@@ -75,6 +70,7 @@ export const PostItemHeader = styled.header`
 
   a {
     text-decoration: none;
+    display: block;
 
     * {
       transition: color ease 0.2s;
@@ -83,6 +79,9 @@ export const PostItemHeader = styled.header`
     &:hover {
       * {
         color: var(--highlight);
+      }
+      h1 {
+        text-decoration: underline;
       }
     }
   }
@@ -131,8 +130,9 @@ export const PostSubCategory = styled.div`
 
 export const PostItemTitle = styled.h1`
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0 0 0.15rem;
+  letter-spacing: 0.01rem;
 
   color: var(--postColor);
 
@@ -141,9 +141,11 @@ export const PostItemTitle = styled.h1`
     margin: 0 0 0.25rem;
   `}
 
-  body#grid & {
-    line-height: 1.1;
-  }
+  ${media.greaterThan('large')`
+    body#grid & {
+      line-height: 1.1;
+    }
+  `};
 `;
 
 export const PostItemDescription = styled.p`
@@ -214,5 +216,9 @@ export const ActionItem = styled.a`
     &.whatsapp {
       background: #1ebead;
     }
+  }
+
+  &.more {
+    width: 2.5rem;
   }
 `;

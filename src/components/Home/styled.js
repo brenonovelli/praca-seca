@@ -3,7 +3,7 @@ import media from 'styled-media-query';
 import { Link } from 'gatsby';
 
 export const Header = styled.header`
-  color: var(--postColor);
+  color: var(--texts);
   margin: 0 auto;
   padding: 3rem 1.4rem 0;
   max-width: 60rem;
@@ -27,14 +27,23 @@ export const Header = styled.header`
 
   p {
     font-size: 1rem;
-    color: var(--texts);
     font-weight: 400;
     line-height: 1.25;
+
+    a {
+      color: var(--texts);
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--highlight);
+      }
+    }
   }
 `;
 
 export const Main = styled.main`
   max-width: 60rem;
+  width: 100%;
   margin: 0 auto;
 `;
 

@@ -43,11 +43,13 @@ export const Subcategory = styled.span`
 `;
 
 export const ListWrapper = styled.section`
-  body#grid & {
-    display: grid;
-    grid-area: posts;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 1px;
-    background: var(--borders);
-  }
+  ${media.greaterThan('large')`
+    body#grid & {
+      display: grid;
+      grid-area: posts;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-gap: 1px;
+      background: var(--borders);
+    }
+  `}
 `;

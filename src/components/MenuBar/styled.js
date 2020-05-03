@@ -17,7 +17,7 @@ export const MenuBarWrapper = styled.aside`
     position: fixed;
     bottom: 0;
     left: 0;
-    background: var(--highlight);
+    background: var(--cornersBars);
 
     flex-direction: row;
     height: 3rem;

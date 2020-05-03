@@ -32,33 +32,56 @@ export const MenuLinksWrapper = styled.nav`
 `;
 
 export const MenuLinksList = styled.ul`
-  font-size: 1.2rem;
-  margin-top: 1rem;
+  /* font-size: 1.2rem; */
+  ${media.greaterThan('large')`
+    margin-top: 1rem;
+  `}
 `;
 
 export const MenuLinksItem = styled.li`
   padding-bottom: 0.5rem;
 
   a {
-    display: block;
+    display: inline-flex;
     padding: 0.5rem 0.75rem;
 
     font-size: 1rem;
     text-decoration: none;
     color: var(--texts);
 
-    transition: color 0.2s;
+    transition: color 0.2s ease;
+    transition: padding 0.2s ease;
 
     ${media.lessThan('large')`
-      font-size: .875rem;
       padding: .5rem .75rem;
     `}
+
     &:hover {
       color: var(--postColor);
     }
+
     &.active {
       color: var(--highlight);
       font-weight: bold;
+    }
+
+    &.button {
+      background: var(--auxiliarBlue);
+      color: var(--white);
+      border-radius: 0.25rem;
+      padding: 0.75rem;
+      margin: 1rem 0;
+      font-weight: bold;
+      letter-spacing: 0.069rem;
+
+      &:hover {
+        padding: 0.75rem 2rem 0.75rem 1rem;
+      }
+
+      &.active {
+        background: var(--highlight);
+        padding: 0.75rem 2rem 0.75rem 1rem;
+      }
     }
   }
 

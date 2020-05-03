@@ -455,7 +455,8 @@ export const MainContent = styled.section`
 `;
 
 export const PostFooter = styled.footer`
-  color: var(--postColor);
+  display: none;
+  /* color: var(--postColor);
   margin: auto;
   max-width: 70rem;
   padding: 1rem 1.4rem;
@@ -471,7 +472,7 @@ export const PostFooter = styled.footer`
     padding: .5rem 0;
     max-width: 100%;
     margin: 0;
-  `}
+  `} */
 `;
 
 export const ReportLink = styled(Link)`
