@@ -54,10 +54,10 @@ export const MenuLinksItem = styled.li`
       padding: .5rem .75rem;
     `}
     &:hover {
-      color: var(--highlight);
+      color: var(--postColor);
     }
     &.active {
-      color: var(--postColor);
+      color: var(--highlight);
       font-weight: bold;
     }
   }
@@ -68,10 +68,6 @@ export const MenuLinksItem = styled.li`
 
     a {
       border-left: 0.25rem solid var(--colorMaster);
-
-      &:hover {
-        color: var(--colorMaster);
-      }
     }
   }
 `;

@@ -13,7 +13,7 @@ const SubscribePage = () => (
       marginHeight="0"
       marginWidth="0"
       title="Cadastre-se"
-      style={{ maxWidth: '100vw', margin: '3rem auto' }}
+      style={{ maxWidth: '100vw', margin: '3rem auto', display: 'block' }}
     >
       Carregando…
     </iframe>
