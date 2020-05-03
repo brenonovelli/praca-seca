@@ -1,5 +1,5 @@
 ---
-title: Carolina Castro - Arte em Doces
+title: Castrolícias - Arte em Doces
 description: Trabalho com doces em geral. Brownie, trufas, bolo, docinhos, e
   sempre vendo kit nas datas comemorativas como o Dia das mães. Procuro sempre
   trazer novidades com preço acessível.
