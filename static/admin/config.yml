@@ -37,13 +37,13 @@ collections:
               { label: 'Estética e Beleza', value: 'Estética e Beleza' },
               { label: 'Informática', value: 'Informática' },
               { label: 'Lojas e Comércios', value: 'Lojas e Comércios' },
+              { label: 'Saúde', value: 'Saúde' },
               {
                 label: 'Serviços Profissionais',
                 value: 'Serviços Profissionais',
               },
             ],
         }
-      # - { label: 'Ramo/categoria', name: 'category', widget: 'string' }
       - {
           label: 'Subcategoria',
           name: 'subcategory',
@@ -56,6 +56,22 @@ collections:
           widget: 'list',
           allow_add: true,
           required: false,
+        }
+      - {
+          label: 'Região',
+          name: 'zone',
+          widget: 'select',
+          options:
+            [
+              { label: 'Centro', value: 'Centro' },
+              { label: 'Chacrinha', value: 'Chacrinha' },
+              {
+                label: 'Ipase - Batô (Bateau Mouche)',
+                value: 'Ipase - Batô (Bateau Mouche)',
+              },
+              { label: 'Próximo ao Campinho', value: 'Próximo ao Campinho' },
+              { label: 'Próximo ao Valqueire', value: 'Próximo ao Valqueire' },
+            ],
         }
       - {
           label: 'Endereço',

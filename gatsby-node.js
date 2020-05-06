@@ -24,6 +24,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       tags: [String]
       delivery: String!
       description: String!
+      zone: String
       address: String
       background: String
       email: String
