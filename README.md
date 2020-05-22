@@ -1,12 +1,22 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+<p>
+  <a href="https://www.pracaseca.com.br">
+    <img alt="Gatsby" src="https://www.pracaseca.com.br/static/9cba207d30779acb77c57a34e840dccc/16c7d/coreto.png" width="60" />
   </a>
 </p>
-<h1 align="center">
-  Gatsby's default starter
+<h1>
+  Guia Praça Seca
 </h1>
+
+---
+
+O Guia Praça Seca é um projeto de desenvolvimento da economia local. Está focado no fortalecimento de vínculos dos moradores com os negócios locais através do [Guia Praça Seca](https://www.pracaseca.com.br/) e entre os negócios locais através de um canal exclusivo no Slack.
+
+O Guia não é uma central de anúncios. É apenas um local de referência. Algo como as antigas páginas amarelas. Onde todos terão o mesmo destaque.
+
+Serão permitidos apenas cadastros de moradores do bairro ou pessoas que possuam negócio no bairro.
+
+----
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 

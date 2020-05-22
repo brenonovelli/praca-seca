@@ -71,6 +71,10 @@ collections:
               },
               { label: 'Próximo ao Campinho', value: 'Próximo ao Campinho' },
               { label: 'Próximo ao Valqueire', value: 'Próximo ao Valqueire' },
+              { label: 'Campinho', value: 'Campinho' },
+              { label: 'Valqueire', value: 'Valqueire' },
+              { label: 'Tanque', value: 'Tanque' },
+              { label: 'Taquara', value: 'Taquara' },
             ],
         }
       - {
