@@ -99,14 +99,15 @@ export const PostsTags = styled.div`
   border-bottom: var(--borders) 1px solid;
 
   ${media.lessThan('large')`
+  
     flex-direction: column; 
     padding: 0 1rem;
     margin-bottom: 0rem;
-  `}
 
-  section ~ div {
-    margin-top: -0.5rem;
-  }
+    section ~ div {
+      margin-top: -0.5rem;
+    }
+  `}
 
   & > section,
   & > div {

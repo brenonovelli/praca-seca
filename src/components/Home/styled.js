@@ -33,6 +33,7 @@ export const Header = styled.header`
     a {
       color: var(--texts);
       transition: color 0.2s ease;
+      font-weight: 600;
 
       &:hover {
         color: var(--highlight);

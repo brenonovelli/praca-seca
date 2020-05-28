@@ -5,22 +5,21 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink';
 export const RecommendedWrapper = styled.section`
   border-bottom: 1px solid var(--borders);
   border-top: 1px solid var(--borders);
-  background: var(--mediumBackground);
   display: flex;
 
   max-width: 70rem;
-  margin: auto;
+  margin: 2rem auto;
 `;
 
 export const RecommendedLink = styled(AniLink)`
   align-items: center;
-  background: var(--mediumBackground);
   color: var(--highlight);
   display: flex;
   padding: 3rem;
   text-decoration: none;
   transition: background 0.5s;
   width: 50%;
+  font-weight: 600;
   ${media.lessThan('large')`
     padding: 1rem;
     line-height: 1.3;

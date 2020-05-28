@@ -15,9 +15,11 @@ export const TagsWrapper = styled.div`
 export const Tag = styled.div`
   display: inline-flex;
   margin-right: 0.5rem;
-  padding-bottom: 0.5rem;
-
   font-size: 0.875rem;
+
+  ${media.lessThan('large')`
+    padding-bottom: 0.5rem;
+  `}
 
   svg {
     color: var(--colorCategory);
